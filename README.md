@@ -1,6 +1,6 @@
 ### Introduction
 
-- 🔭 I’m currently working as a Front-End Developer at Authin  🧑🏻‍💻 
+- 🔭 I’m currently working as a Front-End Developer at ACTINEO GmbH  🧑🏻‍💻 
 - 🌱 I’m currently learning Node to become Full-Stack developer 🤞🏻
 - 😄 Pronouns: in a weird way: <br />
   ☝️ sa - pronounced as 'SA' in SATURDAY <br />
