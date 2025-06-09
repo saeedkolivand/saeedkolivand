@@ -1,7 +1,6 @@
 ## 👋 Hey there, I'm Saeed Kolivand
 
 🔭 **Currently:** Front-End Developer at **[ACTINEO GmbH](https://www.actineo.de/)**  
-🌱 **Learning:** Node.js & backend development – aiming to become a **Full-Stack Developer**  
 😄 **Pronouns (name pronunciation):**  
 &nbsp;&nbsp;&nbsp;&nbsp;☝️ **Sa** – like _SA_ in **Saturday**  
 &nbsp;&nbsp;&nbsp;&nbsp;✌️ **eed** – like _EED_ in **Need**
@@ -27,17 +26,6 @@
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat-square)
 ![SASS](https://img.shields.io/badge/-SASS-CC6699?logo=sass&logoColor=white&style=flat-square)
 ![Ant Design](https://img.shields.io/badge/-AntD-0170FE?logo=ant-design&logoColor=white&style=flat-square)
-
-### 🧰 Back-End & Tools
-![Node.js](https://img.shields.io/badge/-Node.js-339933?logo=node.js&logoColor=white&style=flat-square)
-![Express](https://img.shields.io/badge/-Express-000000?logo=express&logoColor=white&style=flat-square)
-![MongoDB](https://img.shields.io/badge/-MongoDB-47A248?logo=mongodb&logoColor=white&style=flat-square)
-![ESLint](https://img.shields.io/badge/-ESLint-4B32C3?logo=eslint&logoColor=white&style=flat-square)
-![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat-square)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?logo=github&logoColor=white&style=flat-square)
-![Yarn](https://img.shields.io/badge/-Yarn-2C8EBB?logo=yarn&logoColor=white&style=flat-square)
-![npm](https://img.shields.io/badge/-npm-CB3837?logo=npm&logoColor=white&style=flat-square)
-![Terminal](https://img.shields.io/badge/-Terminal-000000?logo=windows-terminal&logoColor=white&style=flat-square)
 
 ---
 
