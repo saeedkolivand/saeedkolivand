@@ -50,7 +50,6 @@
 
 ## 🧠 Currently Exploring
 
-- **Node.js** (Express, MongoDB)
 - **Clean Architecture & Design Patterns**
 - **Testing (Jest, React Testing Library)**
 - **Next.js for Full-Stack Apps**
