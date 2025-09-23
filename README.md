@@ -27,6 +27,7 @@
 ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=flat-square)
 ![SASS](https://img.shields.io/badge/-SASS-CC6699?logo=sass&logoColor=white&style=flat-square)
 ![Ant Design](https://img.shields.io/badge/-AntD-0170FE?logo=ant-design&logoColor=white&style=flat-square)
+![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white&style=flat-square)
 
 ---
 
