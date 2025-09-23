@@ -28,6 +28,7 @@
 ![SASS](https://img.shields.io/badge/-SASS-CC6699?logo=sass&logoColor=white&style=flat-square)
 ![Ant Design](https://img.shields.io/badge/-AntD-0170FE?logo=ant-design&logoColor=white&style=flat-square)
 ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white&style=flat-square)
+![Jest](https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white&style=flat-square)
 
 ---
 
