@@ -62,11 +62,32 @@ const saeed = {
 
 <img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,redux,html,css,sass,tailwind,jest" />
 
+<br/>
+<br/>
+
+<img src="https://img.shields.io/badge/Redux--Saga-999999?style=for-the-badge&logo=redux-saga&logoColor=white" />
+<img src="https://img.shields.io/badge/React%20Testing%20Library-E33332?style=for-the-badge&logo=testinglibrary&logoColor=white" />
+<img src="https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white" />
+<img src="https://img.shields.io/badge/Material%20UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" />
+
+---
+
 ### Tools & Workflow
 
 <img src="https://skillicons.dev/icons?i=git,github,vscode,figma,npm,webpack" />
 
+<br/>
+<br/>
+
+<img src="https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white" />
+<img src="https://img.shields.io/badge/Prettier-F7B93E?style=for-the-badge&logo=prettier&logoColor=black" />
+<img src="https://img.shields.io/badge/Husky-000000?style=for-the-badge&logo=git&logoColor=white" />
+<img src="https://img.shields.io/badge/lint--staged-323330?style=for-the-badge&logo=github&logoColor=white" />
+<img src="https://img.shields.io/badge/PWA-5A0FC8?style=for-the-badge&logo=pwa&logoColor=white" />
+<img src="https://img.shields.io/badge/SSR-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+
 </div>
+
 
 ---
 
