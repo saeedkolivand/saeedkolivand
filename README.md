@@ -1,4 +1,3 @@
-````md
 <div align="center">
 
 # Hey 👋 I'm Saeed Kolivand
@@ -11,9 +10,9 @@ Building modern web apps with React, Next.js, and TypeScript.
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saeedkolivand)
-[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:saeedkolivand1997@gmail.com)
-[![GitHub followers](https://img.shields.io/github/followers/saeedkolivand?style=for-the-badge&logo=github)](https://github.com/saeedkolivand)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/saeedkolivand)
+[![Gmail](https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge\&logo=gmail\&logoColor=white)](mailto:saeedkolivand1997@gmail.com)
+[![GitHub followers](https://img.shields.io/github/followers/saeedkolivand?style=for-the-badge\&logo=github)](https://github.com/saeedkolivand)
 
 </div>
 
@@ -26,6 +25,7 @@ const saeed = {
   location: "Cologne, Germany",
   role: "Front-End Developer @ ACTINEO GmbH",
   experience: "6+ years",
+
   stack: [
     "React",
     "Next.js",
@@ -33,21 +33,24 @@ const saeed = {
     "Redux",
     "Tailwind",
   ],
+
   currentFocus: [
     "Clean Architecture",
     "System Design",
     "Testing",
     "Full-Stack Development",
   ],
+
   hobbies: [
     "Gaming",
     "Photography",
     "Streaming",
     "Playing Guitar",
   ],
+
   cat: "Harley 🐈",
 };
-````
+```
 
 ---
 
@@ -118,4 +121,3 @@ const saeed = {
 <img src="https://komarev.com/ghpvc/?username=saeedkolivand&style=for-the-badge&color=blue" />
 
 </div>
-```
