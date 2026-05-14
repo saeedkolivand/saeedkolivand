@@ -23,7 +23,7 @@ Building modern web apps with React, Next.js, and TypeScript.
 ```ts
 const saeed = {
   location: "Cologne, Germany",
-  role: "Front-End Developer @ ACTINEO GmbH",
+  role: "Front-End Developer",
   experience: "6+ years",
 
   stack: [
