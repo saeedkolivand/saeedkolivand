@@ -21,9 +21,9 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
+- **[saeedkolivand](https://github.com/saeedkolivand/saeedkolivand)** — _no description yet_ `—`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `TypeScript`
 - **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `TypeScript`
-- **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** — Stream Deck plugin showing Claude session/weekly usage `JavaScript`
 <!-- BUILDING:END -->
 
 ## 📦 Featured Work
@@ -88,6 +88,8 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
+`2026-07-30` &nbsp; Pushed to `main` in [saeedkolivand](https://github.com/saeedkolivand/saeedkolivand)
+
 `2026-07-30` &nbsp; Opened PR [#922](https://github.com/saeedkolivand/ai-job-hunter-app/pull/922) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-07-30` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
