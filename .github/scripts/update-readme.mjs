@@ -55,8 +55,14 @@ const line = (e) => {
   }
 };
 
-const repos = (await api(`/users/${USER}/repos?per_page=100&sort=pushed`)).filter((r) => !r.fork && !r.archived);
-const events = await api(`/users/${USER}/events/public?per_page=100`);
+// Exclude the profile repo itself: this workflow pushes to it daily, so it would
+// permanently sit at the top of "Currently Building" as its own most-recent project.
+const isSelf = (name) => name === USER || name === `${USER}/${USER}`;
+
+const repos = (await api(`/users/${USER}/repos?per_page=100&sort=pushed`)).filter(
+  (r) => !r.fork && !r.archived && !isSelf(r.name),
+);
+const events = (await api(`/users/${USER}/events/public?per_page=100`)).filter((e) => !isSelf(e.repo.name));
 
 const building = repos
   .slice(0, BUILDING)
