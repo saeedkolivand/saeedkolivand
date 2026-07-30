@@ -21,9 +21,9 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
+- **[crosskit](https://github.com/saeedkolivand/crosskit)** — A modern, accessible, and customizable React component library built with TypeScript and TailwindCSS; designed for creating beauti… `TypeScript`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `TypeScript`
 - **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `TypeScript`
-- **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** — Stream Deck plugin showing Claude session/weekly usage `JavaScript`
 <!-- BUILDING:END -->
 
 ## 📦 Featured Work
@@ -31,9 +31,9 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 <!-- FEATURED:START -->
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
-| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | TypeScript | 40 |
+| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | TypeScript | 41 |
+| **[crosskit](https://github.com/saeedkolivand/crosskit)** | A modern, accessible, and customizable React component library built with TypeScript and TailwindCSS; designed for creating beauti… | TypeScript | 7 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | JavaScript | 7 |
-| **[react-ui-toolkit](https://github.com/saeedkolivand/react-ui-toolkit)** | A modern, accessible, and customizable React component library built with TypeScript and TailwindCSS; designed for creating beauti… | TypeScript | 7 |
 | **[tokensaver-streamdeck-plugin](https://github.com/saeedkolivand/tokensaver-streamdeck-plugin)** | Stream Deck plugin showing RTK (measured) and Graphify (estimated) AI token savings | JavaScript | 6 |
 | **[ai-engineering-hub](https://github.com/saeedkolivand/ai-engineering-hub)** | A local-first operations platform for your AI coding toolchain. Ingests metrics from any tool, computes analytics + repository int… | Rust | 6 |
 <!-- FEATURED:END -->
@@ -88,13 +88,15 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
+`2026-07-30` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
+
+`2026-07-30` &nbsp; Opened PR [#16](https://github.com/saeedkolivand/crosskit/pull/16) in [crosskit](https://github.com/saeedkolivand/crosskit)
+
 `2026-07-30` &nbsp; Opened PR [#922](https://github.com/saeedkolivand/ai-job-hunter-app/pull/922) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-07-30` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-07-30` &nbsp; Opened PR [#71](https://github.com/saeedkolivand/saeed-kolivand-portfolio/pull/71) in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
-
-`2026-07-30` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
 <!-- ACTIVITY:END -->
 
 ---
