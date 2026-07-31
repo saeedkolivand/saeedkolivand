@@ -88,15 +88,11 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-07-30` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
+`2026-07-31` &nbsp; Opened PR [#48](https://github.com/saeedkolivand/crosskit/pull/48) in [crosskit](https://github.com/saeedkolivand/crosskit)
 
-`2026-07-30` &nbsp; Opened PR [#16](https://github.com/saeedkolivand/crosskit/pull/16) in [crosskit](https://github.com/saeedkolivand/crosskit)
+`2026-07-31` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
 
-`2026-07-30` &nbsp; Opened PR [#922](https://github.com/saeedkolivand/ai-job-hunter-app/pull/922) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-07-30` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-07-30` &nbsp; Opened PR [#71](https://github.com/saeedkolivand/saeed-kolivand-portfolio/pull/71) in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
+`2026-07-31` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
