@@ -34,8 +34,8 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 | **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | TypeScript | 41 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | JavaScript | 8 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | TypeScript | 7 |
+| **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | TypeScript | 6 |
 | **[tokensaver-streamdeck-plugin](https://github.com/saeedkolivand/tokensaver-streamdeck-plugin)** | Stream Deck plugin showing RTK (measured) and Graphify (estimated) AI token savings | JavaScript | 6 |
-| **[ai-engineering-hub](https://github.com/saeedkolivand/ai-engineering-hub)** | A local-first operations platform for your AI coding toolchain. Ingests metrics from any tool, computes analytics + repository int… | Rust | 6 |
 <!-- FEATURED:END -->
 
 ---
