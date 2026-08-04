@@ -125,6 +125,7 @@ const saeed = {
 ## 🎸 Off the Clock
 
 Guitar, story-driven games, photography, and a streaming setup that got out of hand.
+Lately a lot of that time goes to ComfyUI — wiring up node graphs for image and video generation, mostly just to find out what the newest models can actually do.
 My cat **Harley** reviews every pull request by walking across the keyboard. 😼
 
 **Saeed** is pronounced `Sa` (like **Sa**turday) + `eed` (like n**eed**).
