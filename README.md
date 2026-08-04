@@ -80,6 +80,8 @@ const saeed = {
 **Ship**
 
 <img alt="Git, GitHub, VS Code, Vite, Figma, Tauri" src="https://skillicons.dev/icons?i=git,github,vscode,vite,figma,tauri" />
+<!-- skillicons has no ComfyUI icon — using their own logomark, matched to the 48px icon height -->
+<img alt="ComfyUI" height="48" src="https://raw.githubusercontent.com/Comfy-Org/ComfyUI_frontend/main/apps/website/public/icons/logomark.svg" />
 
 </div>
 
