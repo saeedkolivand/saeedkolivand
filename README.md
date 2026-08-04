@@ -90,13 +90,13 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-08-03` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-04` &nbsp; Pushed to `fix/resume-header-and-projects` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-08-04` &nbsp; Opened PR [#931](https://github.com/saeedkolivand/ai-job-hunter-app/pull/931) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-08-02` &nbsp; Opened PR [#85](https://github.com/saeedkolivand/crosskit/pull/85) in [crosskit](https://github.com/saeedkolivand/crosskit)
 
 `2026-08-02` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
-
-`2026-08-02` &nbsp; Opened PR [#930](https://github.com/saeedkolivand/ai-job-hunter-app/pull/930) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-08-02` &nbsp; Released [v0.132.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.132.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
