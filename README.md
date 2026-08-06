@@ -22,8 +22,8 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `TypeScript`
-- **[homebrew-tap](https://github.com/saeedkolivand/homebrew-tap)** — Homebrew tap for saeedkolivand's macOS apps `Ruby`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `Swift`
+- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `TypeScript`
 <!-- BUILDING:END -->
 
 ## 📦 Featured Work
@@ -32,10 +32,10 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
 | **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | TypeScript | 41 |
+| **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | Swift | 8 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | JavaScript | 8 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | TypeScript | 7 |
 | **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | TypeScript | 6 |
-| **[tokensaver-streamdeck-plugin](https://github.com/saeedkolivand/tokensaver-streamdeck-plugin)** | Stream Deck plugin showing RTK (measured) and Graphify (estimated) AI token savings | JavaScript | 6 |
 <!-- FEATURED:END -->
 
 ---
@@ -90,15 +90,11 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-08-05` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-06` &nbsp; Opened PR [#951](https://github.com/saeedkolivand/ai-job-hunter-app/pull/951) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-05` &nbsp; Opened PR [#935](https://github.com/saeedkolivand/ai-job-hunter-app/pull/935) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-06` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-04` &nbsp; Pushed to `main` in [claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)
-
-`2026-08-04` &nbsp; Pushed to `main` in [homebrew-tap](https://github.com/saeedkolivand/homebrew-tap)
-
-`2026-08-04` &nbsp; Pushed to `main` in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
+`2026-08-05` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
 <!-- ACTIVITY:END -->
 
 ---
