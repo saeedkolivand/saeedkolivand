@@ -23,7 +23,7 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `TypeScript`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `Swift`
-- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `TypeScript`
+- **[homebrew-tap](https://github.com/saeedkolivand/homebrew-tap)** — Homebrew tap for saeedkolivand's macOS apps `Ruby`
 <!-- BUILDING:END -->
 
 ## 📦 Featured Work
@@ -90,7 +90,15 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-08-10` &nbsp; Pushed to `feat/content-validation-quality-report` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-11` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-08-11` &nbsp; Opened PR [#965](https://github.com/saeedkolivand/ai-job-hunter-app/pull/965) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-08-10` &nbsp; Pushed to `main` in [homebrew-tap](https://github.com/saeedkolivand/homebrew-tap)
+
+`2026-08-10` &nbsp; Opened PR [#3](https://github.com/saeedkolivand/claude-usage-mac/pull/3) in [claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)
+
+`2026-08-10` &nbsp; Pushed to `main` in [claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)
 <!-- ACTIVITY:END -->
 
 ---
