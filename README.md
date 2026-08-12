@@ -90,15 +90,9 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-08-11` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-12` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-11` &nbsp; Opened PR [#965](https://github.com/saeedkolivand/ai-job-hunter-app/pull/965) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-08-10` &nbsp; Pushed to `main` in [homebrew-tap](https://github.com/saeedkolivand/homebrew-tap)
-
-`2026-08-10` &nbsp; Opened PR [#3](https://github.com/saeedkolivand/claude-usage-mac/pull/3) in [claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)
-
-`2026-08-10` &nbsp; Pushed to `main` in [claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)
+`2026-08-12` &nbsp; Opened PR [#969](https://github.com/saeedkolivand/ai-job-hunter-app/pull/969) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
