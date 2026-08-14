@@ -21,9 +21,9 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** — Stream Deck plugin showing Claude session/weekly usage `JavaScript`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `Swift`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Rust`
-- **[homebrew-tap](https://github.com/saeedkolivand/homebrew-tap)** — Homebrew tap for saeedkolivand's macOS apps `Ruby`
+- **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** — Stream Deck plugin showing Claude session/weekly usage `JavaScript`
 <!-- BUILDING:END -->
 
 ## 📦 Featured Work
@@ -90,15 +90,13 @@ const saeed = {
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
+`2026-08-14` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-08-09` &nbsp; Opened PR [#960](https://github.com/saeedkolivand/ai-job-hunter-app/pull/960) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-08-13` &nbsp; Released [v0.135.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.135.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
 `2026-08-13` &nbsp; Pushed to `main` in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
-
-`2026-08-13` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-08-13` &nbsp; Opened PR [#986](https://github.com/saeedkolivand/ai-job-hunter-app/pull/986) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-08-13` &nbsp; Pushed to `main` in [homebrew-tap](https://github.com/saeedkolivand/homebrew-tap)
-
-`2026-08-13` &nbsp; Opened PR [#4](https://github.com/saeedkolivand/claude-usage-mac/pull/4) in [claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)
 <!-- ACTIVITY:END -->
 
 ---
