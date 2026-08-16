@@ -1,14 +1,6 @@
 <div align="center">
 
-# Hey 👋 I'm Saeed Kolivand
-
-### Front-End Engineer · Cologne, Germany 🇩🇪
-
-I build production React & Next.js apps — and local-first AI tooling for developers.
-
-<img alt="React, Next.js and TypeScript engineer building local-first AI developer tools" width="620" src="assets/header.svg" />
-
-<br/>
+<img alt="Saeed Kolivand — Front-End Engineer, Cologne. One dev, three worlds, zero ghosting." width="900" src="assets/hero.svg" />
 
 [![Portfolio](assets/badge-portfolio.svg)](https://iamsaeed.dev)
 [![LinkedIn](assets/badge-linkedin.svg)](https://www.linkedin.com/in/saeedkolivand)
@@ -18,54 +10,58 @@ I build production React & Next.js apps — and local-first AI tooling for devel
 
 ---
 
-## 🚧 Currently Building
+## 🗞️ The Work
 
-<!-- BUILDING:START -->
-- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `TypeScript`
-- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `TypeScript`
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `Swift`
-<!-- BUILDING:END -->
+<div align="center">
+
+<a href="https://github.com/saeedkolivand/ai-job-hunter-app"><img alt="ai-job-hunter-app — import any job with one click, straight to your local desktop app" width="900" src="assets/shots/job-hunter.png" /></a>
+
+</div>
+
+**[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — a local-first AI job assistant: scrapes boards, matches roles against your résumé, writes the cover letter. Rust + Tauri desktop app with a browser extension. No account, no cloud, nothing leaves your machine.
+
+<div align="center">
+
+<a href="https://github.com/saeedkolivand/claude-usage-mac"><img alt="claude-usage-mac — Claude Code usage in the macOS menu bar and as a widget" width="440" src="assets/shots/claude-usage-mac.png" /></a>
+<a href="https://iamsaeed.dev"><img alt="saeed-kolivand-portfolio — a scroll-driven 3D portfolio told as a comic" width="440" src="assets/shots/portfolio.png" /></a>
+
+</div>
+
+**[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Swift, SwiftUI and WidgetKit. Your Claude Code budget in the menu bar, before you hit the limit.
+&nbsp;&nbsp;•&nbsp;&nbsp;
+**[iamsaeed.dev](https://iamsaeed.dev)** — the portfolio, as a comic book you scroll through. Next.js, Three.js and GSAP.
+
+---
 
 ## 📦 Featured Work
 
 <!-- FEATURED:START -->
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
-| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | TypeScript | 46 |
-| **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | Swift | 13 |
-| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | JavaScript | 11 |
-| **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | TypeScript | 9 |
-| **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | TypeScript | 8 |
+| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 46 |
+| **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 13 |
+| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 11 |
+| **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 9 |
+| **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | Three.js · WebGL · GSAP | 8 |
 <!-- FEATURED:END -->
+
+## 🚧 Currently Building
+
+<!-- BUILDING:START -->
+- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
+<!-- BUILDING:END -->
 
 ---
 
 ## 👨‍💻 About Me
 
-```ts
-const saeed = {
-  location: "Cologne, Germany",
-  website: "https://iamsaeed.dev",
-  role: "Front-End Engineer",
-  experience: "6+ years",
+**The origin issue.** Six years of front-end, most of it React and Next.js, on products people log into every day. Somewhere in there I stopped waiting for a ticket and started shipping my own things.
 
-  stack: [
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Rust",
-    "Tailwind",
-  ],
+**Three worlds.** TypeScript on the web, Rust behind Tauri on the desktop, Swift when the Mac deserves something native. Same instinct every time: keep it local, keep it fast, leave the user's data on the user's machine.
 
-  currentFocus: [
-    "Local-first AI developer tools",
-    "Clean architecture & system design",
-    "Testing at the right level",
-    "Shipping, not scaffolding",
-  ],
-};
-```
+**Zero ghosting.** Issues get answered, PRs get reviewed, releases ship. Currently in Cologne, Germany.
 
 ---
 
@@ -97,20 +93,6 @@ const saeed = {
 
 ---
 
-## 📊 GitHub Analytics
-
-<div align="center">
-
-<!-- Generated daily by .github/workflows/readme.yml — no third-party card service to rate-limit us. -->
-<img alt="Saeed's GitHub statistics" height="170" src="assets/github-stats.svg" />
-<img alt="Most used languages" height="170" src="assets/top-langs.svg" />
-
-<img alt="GitHub contribution streak" width="720" src="assets/streak.svg" />
-
-</div>
-
----
-
 ## 🎯 What I'm Working Toward
 
 * Take the AI tooling from side project to something people depend on
@@ -127,10 +109,24 @@ My cat **Harley** reviews every pull request by walking across the keyboard. �
 
 **Saeed** is pronounced `Sa` (like **Sa**turday) + `eed` (like n**eed**).
 
+---
+
+## 📊 By the Numbers
+
+<div align="center">
+
+<!-- Generated daily by .github/workflows/readme.yml — no third-party card service to rate-limit us. -->
+<img alt="Saeed's GitHub statistics" height="170" src="assets/github-stats.svg" />
+<img alt="Most used languages" height="170" src="assets/top-langs.svg" />
+
+<img alt="GitHub contribution streak" width="720" src="assets/streak.svg" />
+
+</div>
+
 <div align="center">
 
 ### Thanks for visiting 👋
 
-<img alt="Profile views" src="https://komarev.com/ghpvc/?username=saeedkolivand&style=for-the-badge&color=58A6FF" />
+<img alt="Profile views" src="https://komarev.com/ghpvc/?username=saeedkolivand&style=for-the-badge&color=E2574C" />
 
 </div>

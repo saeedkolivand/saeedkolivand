@@ -1,5 +1,6 @@
-// Regenerates the marker-delimited regions of README.md from the GitHub API.
-// No dependencies: Node's built-in fetch. Run it locally with `node .github/scripts/update-readme.mjs`.
+// Regenerates the marker-delimited regions of README.md, and every image it points at, from
+// the GitHub API. No dependencies: Node's built-in fetch.
+// Run it locally with `node .github/scripts/update-readme.mjs`.
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const USER = "saeedkolivand"; // ponytail: hardcoded — it's a profile repo for exactly one person
@@ -19,8 +20,8 @@ const api = async (path) => {
   return res.json();
 };
 
-// The stats region needs GraphQL (REST has no contribution counts). Needs a token —
-// without one the region is left as-is instead of failing the whole local run.
+// The stats cards need GraphQL (REST has no contribution counts). Needs a token — without one
+// those cards are left as they are instead of failing the whole local run.
 const gql = async (query) => {
   const res = await fetch("https://api.github.com/graphql", {
     method: "POST",
@@ -31,6 +32,12 @@ const gql = async (query) => {
   const { data, errors } = await res.json();
   if (errors) throw new Error(errors.map((e) => e.message).join("; "));
   return data;
+};
+
+const raw = async (repo, path) => {
+  const res = await fetch(`https://raw.githubusercontent.com/${USER}/${repo}/HEAD/${path}`);
+  if (!res.ok) throw new Error(`GET ${repo}/${path} -> ${res.status} ${res.statusText}`);
+  return res;
 };
 
 // `|` and newlines break markdown table rows. Clip long descriptions — this README is meant
@@ -78,9 +85,29 @@ const repos = (await api(`/users/${USER}/repos?per_page=100&sort=pushed`)).filte
 );
 const events = (await api(`/users/${USER}/events/public?per_page=100`)).filter((e) => !isSelf(e.repo.name));
 
+// GitHub's `language` field is whichever language has the most bytes, so a Tauri app reads as
+// "TypeScript" and every project looks the same. Repo topics are hand-curated and say what the
+// thing is actually built with — ordered here most-distinctive first, so a row leads with
+// Tauri or SwiftUI rather than with TypeScript.
+const TECH = [
+  // "swift" sits late: a repo tagged both swiftui and swift should lead with the framework.
+  ["tauri", "Tauri"], ["rust", "Rust"], ["swiftui", "SwiftUI"], ["widgetkit", "WidgetKit"],
+  ["threejs", "Three.js"], ["webgl", "WebGL"], ["gsap", "GSAP"], ["tonejs", "Tone.js"], ["electron", "Electron"],
+  ["stream-deck", "Stream Deck"], ["streamdeck", "Stream Deck"], ["nextjs", "Next.js"], ["react", "React"],
+  ["vue", "Vue"], ["svelte", "Svelte"], ["angular", "Angular"], ["tailwindcss", "Tailwind"], ["nodejs", "Node.js"],
+  ["typescript", "TypeScript"], ["javascript", "JavaScript"], ["python", "Python"], ["swift", "Swift"], ["macos", "macOS"],
+  ["design-system", "Design System"], ["local-first", "Local-first"],
+];
+
+const stackOf = (repo, max = 3) => {
+  const topics = repo.topics ?? [];
+  const named = [...new Set(TECH.filter(([slug]) => topics.includes(slug)).map(([, name]) => name))];
+  return (named.length ? named.slice(0, max) : [repo.language].filter(Boolean)).join(" · ") || "—";
+};
+
 const building = repos
   .slice(0, BUILDING)
-  .map((r) => `- **[${r.name}](${r.html_url})** — ${cell(r.description) || "_no description yet_"} \`${r.language ?? "—"}\``)
+  .map((r) => `- **[${r.name}](${r.html_url})** — ${cell(r.description) || "_no description yet_"} \`${stackOf(r, 2)}\``)
   .join("\n");
 
 const featured = [
@@ -89,7 +116,7 @@ const featured = [
   ...[...repos]
     .sort((a, b) => b.stargazers_count - a.stargazers_count)
     .slice(0, FEATURED)
-    .map((r) => `| **[${r.name}](${r.html_url})** | ${cell(r.description) || "—"} | ${r.language ?? "—"} | ${r.stargazers_count} |`),
+    .map((r) => `| **[${r.name}](${r.html_url})** | ${cell(r.description) || "—"} | ${stackOf(r)} | ${r.stargazers_count} |`),
 ].join("\n");
 
 // ponytail: dedupe by repo so one busy day doesn't fill the whole list with the same project
@@ -104,35 +131,93 @@ const shown = events
   .slice(0, ACTIVITY);
 const activity = shown.map((e) => e.text).join("\n\n");
 
-// tokyonight, so the generated cards match the streak card next to them.
-const BG = "#1a1b27";
-const TITLE = "#70a5fd";
-const LABEL = "#38bdae";
-const VALUE = "#a9fef7";
-const FONT = "'Segoe UI',Ubuntu,sans-serif";
-
-// ponytail: linguist colors for the languages that actually show up, grey for the rest
-const LANG_COLOR = {
-  TypeScript: "#3178c6", JavaScript: "#f1e05a", Rust: "#dea584", Swift: "#F05138",
-  CSS: "#563d7c", SCSS: "#c6538c", HTML: "#e34c26", Python: "#3572A5", Shell: "#89e051",
-  Vue: "#41b883", Svelte: "#ff3e00", Go: "#00ADD8", Java: "#b07219", Kotlin: "#A97BFF",
-  Dart: "#00B4AB", Ruby: "#701516", C: "#555555", "C++": "#f34b7d", Typst: "#239dad", MDX: "#fcb32c",
-};
+// --- Look and feel -----------------------------------------------------------------------
+// Lifted from the portfolio (iamsaeed.dev), which is art-directed as a comic book: paper
+// #f2ead9, that red, halftone screentone, heavy inked panel borders. The profile used to be
+// generic dark-blue card defaults, which looked like everybody else's.
+const PAPER = "#f2ead9";
+const INK = "#1c1a17";
+const RED = "#e2574c";
+const TEAL = "#2f9e95";
+const MUTED = "#7a7264";
+const FONT = "'Segoe UI',Ubuntu,Helvetica,sans-serif";
+const HEAVY = "'Arial Black','Helvetica Neue',Impact,sans-serif";
+const MONO = "ui-monospace,Consolas,monospace";
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-const text = (x, y, s, { size = 14, weight = 400, fill = VALUE, anchor = "start" } = {}) =>
-  `<text x="${x}" y="${y}" font-family="${FONT}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}">${esc(s)}</text>`;
-const svgDoc = (w, h, label, body) =>
+const text = (x, y, s, { size = 14, weight = 400, fill = INK, anchor = "start", font = FONT, spacing = 0, extra = "" } = {}) =>
+  `<text x="${x}" y="${y}" font-family="${font}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}"${spacing ? ` letter-spacing="${spacing}"` : ""}${extra}>${esc(s)}</text>`;
+
+// A panel is inked paper with a hard offset shadow — no blur, no gradient, like print.
+const svgDoc = (w, h, label, body, { pattern = true } = {}) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}">
-<rect x="0" y="0" width="${w}" height="${h}" rx="6" fill="${BG}"/>
+<defs><pattern id="tone" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="${INK}" opacity="0.06"/></pattern></defs>
+<rect x="6" y="6" width="${w - 6}" height="${h - 6}" fill="${INK}"/>
+<rect x="1.5" y="1.5" width="${w - 9}" height="${h - 9}" fill="${PAPER}" stroke="${INK}" stroke-width="3"/>
+${pattern ? `<rect x="3" y="3" width="${w - 12}" height="${h - 12}" fill="url(#tone)"/>` : ""}
 ${body}
 </svg>
 `;
-const card = (title, body) => svgDoc(400, 170, title, `${text(25, 34, title, { size: 18, weight: 600, fill: TITLE })}\n${body}`);
 
+// Panel titles: heavy, uppercase, tracked out, with the red rule underneath that the portfolio
+// uses on its section headings.
+const panelTitle = (title, w) =>
+  [
+    text(24, 38, title.toUpperCase(), { size: 19, weight: 900, font: HEAVY, spacing: 0.5 }),
+    `<rect x="24" y="48" width="${w - 48}" height="3" fill="${RED}"/>`,
+  ].join("\n");
+
+const card = (title, body) => svgDoc(400, 170, title, `${panelTitle(title, 400)}\n${body}`);
+
+// --- Hero --------------------------------------------------------------------------------
+// Bangers is the display face on the portfolio, so the name has to be set in it. Embedded as a
+// data URI: an SVG loaded through <img> cannot fetch a font, and GitHub proxies these anyway.
+const heroCard = async () => {
+  const font = Buffer.from(await (await raw("saeed-kolivand-portfolio", "public/fonts/Bangers-Regular.ttf")).arrayBuffer()).toString("base64");
+  const W = 900, H = 300;
+  const display = (x, y, s, size, fill) =>
+    `<text x="${x}" y="${y}" font-family="Bangers" font-size="${size}" fill="${fill}" text-anchor="middle">${esc(s)}</text>`;
+
+  await writeFile(
+    "assets/hero.svg",
+    svgDoc(W, H, "Saeed Kolivand — Front-End Engineer, Cologne", [
+      `<style>@font-face{font-family:'Bangers';font-style:normal;font-weight:400;src:url(data:font/truetype;base64,${font}) format('truetype');}</style>`,
+      text(W / 2, 62, "ISSUE #2  ·  COLOGNE, GERMANY  ·  EST. 2019", { size: 13, fill: MUTED, anchor: "middle", font: MONO, spacing: 2.5 }),
+      // Red sits a few pixels behind the ink, the way a misregistered print run looks.
+      display(W / 2 + 4, 152, "SAEED KOLIVAND", 88, RED),
+      display(W / 2, 148, "SAEED KOLIVAND", 88, INK),
+      `<rect x="150" y="176" width="${W - 300}" height="42" fill="${RED}"/>`,
+      `<rect x="150" y="176" width="${W - 300}" height="42" fill="none" stroke="${INK}" stroke-width="3"/>`,
+      text(W / 2, 204, "ONE DEV. THREE WORLDS. ZERO GHOSTING.", { size: 18, weight: 900, fill: PAPER, anchor: "middle", font: HEAVY, spacing: 1.5 }),
+      text(W / 2, 248, "Local-first AI tooling · React & Next.js on the web · Rust + Tauri on the desktop · SwiftUI on the Mac", { size: 14, fill: INK, anchor: "middle" }),
+      text(W / 2, 272, "iamsaeed.dev", { size: 13, fill: TEAL, anchor: "middle", font: MONO, spacing: 1.5 }),
+    ].join("\n")),
+  );
+  console.log("Wrote assets/hero.svg.");
+};
+
+// --- Product shots -------------------------------------------------------------------------
+// Copied out of the project repos rather than hotlinked, so reorganising docs/ over there can
+// never leave a broken image here — the workflow fails loudly instead and the copy stays put.
+const SHOTS = [
+  ["ai-job-hunter-app", "apps/extension/store-assets/promo/marquee-1400x560.png", "job-hunter.png"],
+  ["claude-usage-mac", "docs/gallery/widget-medium.png", "claude-usage-mac.png"],
+  ["saeed-kolivand-portfolio", "docs/readme/plates/00-cover.png", "portfolio.png"],
+];
+
+const shots = async () => {
+  await mkdir("assets/shots", { recursive: true });
+  for (const [repo, path, out] of SHOTS) {
+    const bytes = Buffer.from(await (await raw(repo, path)).arrayBuffer());
+    await writeFile(`assets/shots/${out}`, bytes);
+    console.log(`Wrote assets/shots/${out} (${Math.round(bytes.length / 1024)}KB from ${repo}).`);
+  }
+};
+
+// --- Stats cards ---------------------------------------------------------------------------
 // Replaces the github-readme-stats cards, which are rate-limited on the shared Vercel
 // instance and render as "Maximum retries exceeded" most of the day.
-const statsRegion = async () => {
+const statsCards = async () => {
   const { user } = await gql(`{ user(login: "${USER}") {
     repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
       totalCount
@@ -146,18 +231,18 @@ const statsRegion = async () => {
   const nodes = user.repositories.nodes;
   const n = (v) => v.toLocaleString("en-US");
   const rows = [
-    ["Total Stars Earned", nodes.reduce((sum, r) => sum + r.stargazerCount, 0)],
-    ["Total Commits (past year)", user.contributionsCollection.totalCommitContributions],
-    ["Total PRs", user.pullRequests.totalCount],
-    ["Total Issues", user.issues.totalCount],
-    ["Public Repositories", user.repositories.totalCount],
+    ["Stars earned", nodes.reduce((sum, r) => sum + r.stargazerCount, 0)],
+    ["Commits, past year", user.contributionsCollection.totalCommitContributions],
+    ["Pull requests", user.pullRequests.totalCount],
+    ["Issues", user.issues.totalCount],
+    ["Public repositories", user.repositories.totalCount],
   ];
   const stats = card(
-    "Saeed's GitHub Stats",
+    "The Numbers",
     rows
       .map(([label, value], i) => {
-        const y = 66 + i * 22;
-        return text(25, y, label, { fill: LABEL }) + text(375, y, n(value), { weight: 600, anchor: "end" });
+        const y = 76 + i * 20;
+        return text(24, y, label, { fill: MUTED }) + text(376, y, n(value), { weight: 900, font: HEAVY, anchor: "end" });
       })
       .join("\n"),
   );
@@ -169,14 +254,13 @@ const statsRegion = async () => {
   const top = Object.entries(bytes)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 6)
-    .map(([name, size]) => ({ name, pct: (size / total) * 100, color: LANG_COLOR[name] ?? "#858585" }));
+    .map(([name, size]) => ({ name, pct: (size / total) * 100, color: LANG_COLOR[name] ?? MUTED }));
 
-  // The bar is clipped to a rounded rect so the segments can stay plain rects.
-  let x = 25;
+  let x = 24;
   const segments = top
     .map(({ pct, color }) => {
-      const w = (pct / 100) * 350;
-      const seg = `<rect x="${x.toFixed(1)}" y="52" width="${w.toFixed(1)}" height="10" fill="${color}"/>`;
+      const w = (pct / 100) * 352;
+      const seg = `<rect x="${x.toFixed(1)}" y="66" width="${w.toFixed(1)}" height="14" fill="${color}"/>`;
       x += w;
       return seg;
     })
@@ -184,26 +268,26 @@ const statsRegion = async () => {
   const legend = top
     .map(({ name, pct, color }, i) => {
       const cx = 30 + (i % 2) * 185;
-      const cy = 92 + Math.floor(i / 2) * 24;
-      return `<circle cx="${cx}" cy="${cy}" r="5" fill="${color}"/>` + text(cx + 12, cy + 4, `${name} ${pct.toFixed(1)}%`, { fill: LABEL });
+      const cy = 104 + Math.floor(i / 2) * 22;
+      return `<rect x="${cx - 5}" y="${cy - 5}" width="10" height="10" fill="${color}" stroke="${INK}" stroke-width="1.5"/>` +
+        text(cx + 13, cy + 4, `${name} ${pct.toFixed(1)}%`, { fill: INK, size: 13 });
     })
     .join("\n");
   const langs = card(
     "Most Used Languages",
-    `<clipPath id="bar"><rect x="25" y="52" width="350" height="10" rx="5"/></clipPath>
-<g clip-path="url(#bar)"><rect x="25" y="52" width="350" height="10" fill="#2a2b3d"/>
-${segments}</g>
+    `<rect x="24" y="66" width="352" height="14" fill="${PAPER}" stroke="${INK}" stroke-width="2"/>
+${segments}
+<rect x="24" y="66" width="352" height="14" fill="none" stroke="${INK}" stroke-width="2"/>
 ${legend}`,
   );
 
-  await mkdir("assets", { recursive: true });
   await writeFile("assets/github-stats.svg", stats);
   await writeFile("assets/top-langs.svg", langs);
   console.log(`Wrote assets/github-stats.svg and assets/top-langs.svg (${top.length} languages).`);
 };
 
-// Same idea for the streak card: the contribution calendar is one GraphQL query per year
-// (the API caps a range at 12 months), so the whole history is one request with aliases.
+// The contribution calendar is capped at 12 months per query, so the whole history is one
+// request with a year alias each.
 const streakCard = async () => {
   const { user } = await gql(`{ user(login: "${USER}") { createdAt } }`);
   const first = new Date(user.createdAt);
@@ -248,61 +332,46 @@ const streakCard = async () => {
     if (d.getUTCFullYear() !== new Date().getUTCFullYear()) opts.year = "numeric";
     return d.toLocaleDateString("en-US", opts);
   };
-  const range = (s) => (s.length ? (s.from === s.to ? day(s.from) : `${day(s.from)} - ${day(s.to)}`) : "—");
+  const range = (s) => (s.length ? (s.from === s.to ? day(s.from) : `${day(s.from)} – ${day(s.to)}`) : "—");
 
-  const column = (x, value, label, dates, color) =>
+  // Sized so a phone, which renders this 720-wide card at ~0.5x, still lands near 10px.
+  const column = (x, value, label, dates) =>
     [
-      // Sized so a phone, which renders this 720-wide card at ~0.5x, still lands near 10px.
-      text(x, 97, value.toLocaleString("en-US"), { size: 42, weight: 700, fill: color, anchor: "middle" }),
-      text(x, 152, label, { size: 20, weight: 600, fill: color, anchor: "middle" }),
-      text(x, 181, dates, { size: 18, fill: LABEL, anchor: "middle" }),
+      text(x, 124, value.toLocaleString("en-US"), { size: 46, weight: 900, font: HEAVY, anchor: "middle" }),
+      text(x, 174, label.toUpperCase(), { size: 14, weight: 900, fill: RED, anchor: "middle", font: HEAVY, spacing: 1 }),
+      text(x, 200, dates, { size: 16, fill: MUTED, anchor: "middle" }),
     ].join("\n");
 
-  const streak = svgDoc(
-    720,
-    210,
-    "GitHub contribution streak",
-    [
-      `<line x1="240" y1="30" x2="240" y2="180" stroke="#2a2b3d" stroke-width="1"/>`,
-      `<line x1="480" y1="30" x2="480" y2="180" stroke="#2a2b3d" stroke-width="1"/>`,
-      column(120, total, "Total Contributions", `${day(user.createdAt.slice(0, 10))} - Present`, TITLE),
-      // The ring is the current streak's badge — gap at the top for the flame, like the original.
-      `<circle cx="360" cy="84" r="48" fill="none" stroke="${TITLE}" stroke-width="5"/>`,
-      `<rect x="344" y="28" width="32" height="16" fill="${BG}"/>`,
-      text(360, 42, "🔥", { size: 18, anchor: "middle" }),
-      column(360, current.length, "Current Streak", range(current), "#bf91f3"),
-      column(600, longest.length, "Longest Streak", range(longest), TITLE),
-    ].join("\n"),
-  );
+  const streak = svgDoc(720, 236, "GitHub contribution streak", [
+    panelTitle("Shipping Record", 720),
+    `<line x1="248" y1="66" x2="248" y2="214" stroke="${INK}" stroke-width="2"/>`,
+    `<line x1="472" y1="66" x2="472" y2="214" stroke="${INK}" stroke-width="2"/>`,
+    column(136, total, "Contributions", `${day(user.createdAt.slice(0, 10))} – today`),
+    // The ring is the current streak's badge — gap at the top for the flame.
+    `<circle cx="360" cy="108" r="46" fill="none" stroke="${RED}" stroke-width="5"/>`,
+    `<rect x="344" y="56" width="32" height="14" fill="${PAPER}"/>`,
+    text(360, 68, "🔥", { size: 18, anchor: "middle" }),
+    column(360, current.length, "Current Streak", range(current)),
+    column(584, longest.length, "Longest Streak", range(longest)),
+  ].join("\n"));
 
   await writeFile("assets/streak.svg", streak);
   console.log(`Wrote assets/streak.svg (${total} contributions, ${current.length}-day current, ${longest.length}-day longest).`);
 };
 
-// --- Cards that need no GitHub data: the stack strips and the link badges. ---
-
-// The header is readme-typing-svg's own output — same font, colours and timing as before —
-// but vendored by the workflow instead of hotlinked by the README. Their SVG embeds Inter as
-// a data URI, so the committed copy has no external references. Same bytes every request, so
-// this only produces a commit when the lines below actually change.
-const TYPING_SVG =
-  "https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=620" +
-  "&lines=Front-End+Engineer%2C+6%2B+years;React+%7C+Next.js+%7C+TypeScript;Building+local-first+AI+dev+tools;Clean+architecture%2C+shipped+products";
-
-const headerCard = async () => {
-  const res = await fetch(TYPING_SVG);
-  if (!res.ok) throw new Error(`GET readme-typing-svg -> ${res.status} ${res.statusText}`);
-  await writeFile("assets/header.svg", await res.text());
-  console.log("Wrote assets/header.svg.");
+// --- Stack strips and badges ---------------------------------------------------------------
+// Inked monochrome glyphs, like a printed page — brand colours would fight the paper, and the
+// pale ones (JavaScript yellow) are unreadable on it.
+const STACK = {
+  build: ["typescript", "javascript", "react", "nextdotjs", "nodedotjs", "rust", "tailwindcss", "jest"],
+  ship: ["git", "github", "visualstudiocode", "vite", "figma", "tauri"],
 };
 
-// Brand hex per icon: near-black brands (Next.js, GitHub) get a light stand-in so they stay
-// visible on the dark card, and Rust reuses the tone the language bar already uses.
-const STACK = {
-  build: [["typescript", "#3178C6"], ["javascript", "#F7DF1E"], ["react", "#61DAFB"], ["nextdotjs", "#FFFFFF"],
-    ["nodedotjs", "#5FA04E"], ["rust", "#DEA584"], ["tailwindcss", "#06B6D4"], ["jest", "#C21325"]],
-  ship: [["git", "#F05032"], ["github", "#FFFFFF"], ["visualstudiocode", "#007ACC"], ["vite", "#646CFF"],
-    ["figma", "#F24E1E"], ["tauri", "#24C8DB"]],
+const LANG_COLOR = {
+  TypeScript: "#3178c6", JavaScript: "#f1e05a", Rust: "#dea584", Swift: "#F05138",
+  CSS: "#563d7c", SCSS: "#c6538c", HTML: "#e34c26", Python: "#3572A5", Shell: "#89e051",
+  Vue: "#41b883", Svelte: "#ff3e00", Go: "#00ADD8", Java: "#b07219", Kotlin: "#A97BFF",
+  Dart: "#00B4AB", Ruby: "#701516", C: "#555555", "C++": "#f34b7d", Typst: "#239dad", MDX: "#fcb32c",
 };
 
 const iconPath = async (slug) => {
@@ -311,59 +380,61 @@ const iconPath = async (slug) => {
   return (await res.text()).match(/<path[^>]*\sd="([^"]+)"/)[1];
 };
 
-const stackStrip = async (name, icons, extras = []) => {
-  const SIZE = 40, GAP = 22, PAD = 22;
-  const paths = await Promise.all(icons.map(([slug]) => iconPath(slug)));
+const stackStrip = async (name, slugs, extras = []) => {
+  const SIZE = 38, GAP = 24, PAD = 26;
+  const paths = await Promise.all(slugs.map(iconPath));
   const at = (i) => PAD + i * (SIZE + GAP);
-  const glyphs = paths.map((d, i) => `<path d="${d}" fill="${icons[i][1]}" transform="translate(${at(i)},20) scale(${SIZE / 24})"/>`);
-  // ComfyUI has no simple-icon, so its logomark is vendored in assets/ and nested as-is.
+  const glyphs = paths.map((d, i) => `<path d="${d}" fill="${INK}" transform="translate(${at(i)},26) scale(${SIZE / 24})"/>`);
+  // ComfyUI has no simple-icon, so its logomark is vendored in assets/ and inked to match.
   const nested = await Promise.all(
     extras.map(async (file, i) => {
-      const raw = await readFile(file, "utf8");
-      const box = raw.match(/viewBox="([^"]+)"/)[1];
-      const inner = raw.replace(/^[\s\S]*?<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
-      return `<svg x="${at(icons.length + i)}" y="20" width="${SIZE}" height="${SIZE}" viewBox="${box}">${inner}</svg>`;
+      const svg = await readFile(file, "utf8");
+      const box = svg.match(/viewBox="([^"]+)"/)[1];
+      const inner = svg.replace(/^[\s\S]*?<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "").replace(/fill="#[0-9A-Fa-f]{6}"/g, `fill="${INK}"`);
+      return `<svg x="${at(slugs.length + i)}" y="26" width="${SIZE}" height="${SIZE}" viewBox="${box}">${inner}</svg>`;
     }),
   );
-  const count = icons.length + extras.length;
-  await writeFile(`assets/${name}.svg`, svgDoc(PAD * 2 + count * SIZE + (count - 1) * GAP, 80, `${name} stack`, [...glyphs, ...nested].join("\n")));
+  const count = slugs.length + extras.length;
+  await writeFile(`assets/${name}.svg`, svgDoc(PAD * 2 + count * SIZE + (count - 1) * GAP, 90, `${name} stack`, [...glyphs, ...nested].join("\n")));
   console.log(`Wrote assets/${name}.svg (${count} icons).`);
 };
 
-// shields.io's for-the-badge look, minus shields.io. The link stays in the README markdown,
-// so these are still clickable.
+// shields.io's job, done on paper: inked box, offset shadow, brand glyph, tracked-out caps.
 const badge = async (name, label, slug, color) => {
-  const H = 28, SIZE = 11, CW = 8.4, logo = 15;
-  const w = 14 + logo + 8 + label.length * CW + 14;
+  const H = 34, CW = 8.6, logo = 15, w = 16 + logo + 9 + label.length * CW + 16;
   await writeFile(
     `assets/badge-${name}.svg`,
-    svgDoc(w, H, label, [
-      `<rect x="0" y="0" width="${w}" height="${H}" rx="4" fill="${color}"/>`,
-      `<path d="${await iconPath(slug)}" fill="#fff" transform="translate(14,${(H - logo) / 2}) scale(${logo / 24})"/>`,
-      `<text x="${14 + logo + 8}" y="${H / 2 + 4}" font-family="${FONT}" font-size="${SIZE}" font-weight="700" fill="#fff" letter-spacing="1.5" textLength="${(label.length * CW).toFixed(1)}" lengthAdjust="spacing">${esc(label)}</text>`,
-    ].join("\n")),
+    `<svg xmlns="http://www.w3.org/2000/svg" width="${w + 5}" height="${H + 5}" viewBox="0 0 ${w + 5} ${H + 5}" role="img" aria-label="${esc(label)}">
+<rect x="5" y="5" width="${w}" height="${H}" fill="${INK}"/>
+<rect x="1.5" y="1.5" width="${w - 3}" height="${H - 3}" fill="${color}" stroke="${INK}" stroke-width="3"/>
+<path d="${await iconPath(slug)}" fill="${PAPER}" transform="translate(16,${(H - logo) / 2}) scale(${logo / 24})"/>
+<text x="${16 + logo + 9}" y="${H / 2 + 5}" font-family="${HEAVY}" font-size="12" font-weight="900" fill="${PAPER}" letter-spacing="1.4" textLength="${(label.length * CW).toFixed(1)}" lengthAdjust="spacing">${esc(label)}</text>
+</svg>
+`,
   );
 };
 
 await mkdir("assets", { recursive: true });
-await headerCard();
+await heroCard();
+await shots();
 await stackStrip("stack-build", STACK.build);
 await stackStrip("stack-ship", STACK.ship, ["assets/comfyui.svg"]);
 await Promise.all([
-  badge("portfolio", "IAMSAEED.DEV", "googlechrome", "#E2574C"),
+  badge("portfolio", "IAMSAEED.DEV", "googlechrome", RED),
   badge("linkedin", "LINKEDIN", "linkedin", "#0A66C2"),
-  badge("email", "EMAIL", "gmail", "#EA4335"),
+  badge("email", "EMAIL", "gmail", INK),
 ]);
 console.log("Wrote assets/badge-*.svg.");
+
+if (process.env.GITHUB_TOKEN) {
+  await statsCards();
+  await streakCard();
+} else console.warn("No GITHUB_TOKEN — leaving the stat cards in assets/ unchanged.");
 
 let md = await readFile(FILE, "utf8");
 md = replaceRegion(md, "BUILDING", building);
 md = replaceRegion(md, "FEATURED", featured);
 md = replaceRegion(md, "ACTIVITY", activity);
-if (process.env.GITHUB_TOKEN) {
-  await statsRegion();
-  await streakCard();
-} else console.warn("No GITHUB_TOKEN — leaving the stat cards in assets/ unchanged.");
 await writeFile(FILE, md);
 
 console.log(`Updated ${FILE}: ${BUILDING} building, ${FEATURED} featured, ${shown.length} activity entries.`);
