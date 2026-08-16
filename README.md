@@ -103,8 +103,20 @@ const saeed = {
 
 <div align="center">
 
-<img alt="Saeed's GitHub statistics" height="170" src="https://github-readme-stats-sigma-five.vercel.app/api?username=saeedkolivand&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github" />
-<img alt="Most used languages" height="170" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=saeedkolivand&layout=compact&theme=tokyonight&hide_border=true" />
+<!-- STATS:START -->
+| ⭐ Stars | 📦 Repos | 🔀 PRs | 🐛 Issues | 💾 Commits (past year) |
+| --: | --: | --: | --: | --: |
+| 174 | 23 | 956 | 2 | 1,811 |
+
+```text
+TypeScript  ██████████░░░░░░░░░░  50.3%
+Rust        ███████░░░░░░░░░░░░░  36.2%
+JavaScript  █░░░░░░░░░░░░░░░░░░░   6.9%
+CSS         ░░░░░░░░░░░░░░░░░░░░   2.3%
+Swift       ░░░░░░░░░░░░░░░░░░░░   1.5%
+Typst       ░░░░░░░░░░░░░░░░░░░░   1.0%
+```
+<!-- STATS:END -->
 
 <img alt="GitHub contribution streak" width="720" src="https://streak-stats.demolab.com?user=saeedkolivand&theme=tokyonight&hide_border=true" />
 

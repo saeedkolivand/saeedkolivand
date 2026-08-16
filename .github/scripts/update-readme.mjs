@@ -19,6 +19,20 @@ const api = async (path) => {
   return res.json();
 };
 
+// The stats region needs GraphQL (REST has no contribution counts). Needs a token —
+// without one the region is left as-is instead of failing the whole local run.
+const gql = async (query) => {
+  const res = await fetch("https://api.github.com/graphql", {
+    method: "POST",
+    headers: { authorization: `Bearer ${process.env.GITHUB_TOKEN}`, "content-type": "application/json" },
+    body: JSON.stringify({ query }),
+  });
+  if (!res.ok) throw new Error(`POST /graphql -> ${res.status} ${res.statusText}`);
+  const { data, errors } = await res.json();
+  if (errors) throw new Error(errors.map((e) => e.message).join("; "));
+  return data;
+};
+
 // `|` and newlines break markdown table rows. Clip long descriptions — this README is meant
 // to be scanned in 30 seconds, and some repo descriptions run to 250 characters.
 const cell = (s, max = 130) => {
@@ -90,10 +104,51 @@ const shown = events
   .slice(0, ACTIVITY);
 const activity = shown.map((e) => e.text).join("\n\n");
 
+// Replaces the github-readme-stats cards, which are rate-limited on the shared Vercel
+// instance and render as "Maximum retries exceeded" most of the day.
+const statsRegion = async () => {
+  const { user } = await gql(`{ user(login: "${USER}") {
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {
+      totalCount
+      nodes { stargazerCount languages(first: 8, orderBy: {field: SIZE, direction: DESC}) { edges { size node { name } } } }
+    }
+    pullRequests { totalCount }
+    issues { totalCount }
+    contributionsCollection { totalCommitContributions }
+  } }`);
+
+  const nodes = user.repositories.nodes;
+  const n = (v) => v.toLocaleString("en-US");
+  const table = [
+    "| ⭐ Stars | 📦 Repos | 🔀 PRs | 🐛 Issues | 💾 Commits (past year) |",
+    "| --: | --: | --: | --: | --: |",
+    `| ${n(nodes.reduce((sum, r) => sum + r.stargazerCount, 0))} | ${n(user.repositories.totalCount)} | ${n(user.pullRequests.totalCount)} | ${n(user.issues.totalCount)} | ${n(user.contributionsCollection.totalCommitContributions)} |`,
+  ].join("\n");
+
+  // Bytes per language across every public repo — same measure the top-langs card used.
+  const bytes = {};
+  for (const { languages } of nodes) for (const e of languages.edges) bytes[e.node.name] = (bytes[e.node.name] ?? 0) + e.size;
+  const total = Object.values(bytes).reduce((a, b) => a + b, 0) || 1;
+  const top = Object.entries(bytes)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 6);
+  const width = Math.max(...top.map(([name]) => name.length));
+  const bars = top
+    .map(([name, size]) => {
+      const pct = (size / total) * 100;
+      return `${name.padEnd(width)}  ${"█".repeat(Math.round(pct / 5)).padEnd(20, "░")}  ${pct.toFixed(1).padStart(4)}%`;
+    })
+    .join("\n");
+
+  return `${table}\n\n\`\`\`text\n${bars}\n\`\`\``;
+};
+
 let md = await readFile(FILE, "utf8");
 md = replaceRegion(md, "BUILDING", building);
 md = replaceRegion(md, "FEATURED", featured);
 md = replaceRegion(md, "ACTIVITY", activity);
+if (process.env.GITHUB_TOKEN) md = replaceRegion(md, "STATS", await statsRegion());
+else console.warn("No GITHUB_TOKEN — leaving the STATS region unchanged.");
 await writeFile(FILE, md);
 
 console.log(`Updated ${FILE}: ${BUILDING} building, ${FEATURED} featured, ${shown.length} activity entries.`);
