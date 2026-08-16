@@ -2,9 +2,7 @@
 
 <img alt="Saeed Kolivand — Front-End Engineer, Cologne. One dev, three worlds, zero ghosting." width="900" src="assets/hero.svg" />
 
-[![Portfolio](assets/badge-portfolio.svg)](https://iamsaeed.dev)
-[![LinkedIn](assets/badge-linkedin.svg)](https://www.linkedin.com/in/saeedkolivand)
-[![Email](assets/badge-email.svg)](mailto:saeedkolivand1997@gmail.com)
+[![Portfolio](assets/badge-portfolio.svg)](https://iamsaeed.dev) [![LinkedIn](assets/badge-linkedin.svg)](https://www.linkedin.com/in/saeedkolivand) [![Email](assets/badge-email.svg)](mailto:saeedkolivand1997@gmail.com)
 
 </div>
 
@@ -14,22 +12,28 @@
 
 <div align="center">
 
-<a href="https://github.com/saeedkolivand/ai-job-hunter-app"><img alt="ai-job-hunter-app — import any job with one click, straight to your local desktop app" width="900" src="assets/shots/job-hunter.png" /></a>
+<a href="https://github.com/saeedkolivand/ai-job-hunter-app"><img alt="AI Job Hunter — your AI job-hunting copilot, on your machine. Local-first, works fully offline, 16 job boards." width="900" src="assets/shots/job-hunter.png" /></a>
 
 </div>
 
 **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — a local-first AI job assistant: scrapes boards, matches roles against your résumé, writes the cover letter. Rust + Tauri desktop app with a browser extension. No account, no cloud, nothing leaves your machine.
 
-<div align="center">
-
-<a href="https://github.com/saeedkolivand/claude-usage-mac"><img alt="claude-usage-mac — Claude Code usage in the macOS menu bar and as a widget" width="440" src="assets/shots/claude-usage-mac.png" /></a>
-<a href="https://iamsaeed.dev"><img alt="saeed-kolivand-portfolio — a scroll-driven 3D portfolio told as a comic" width="440" src="assets/shots/portfolio.png" /></a>
-
-</div>
-
-**[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Swift, SwiftUI and WidgetKit. Your Claude Code budget in the menu bar, before you hit the limit.
-&nbsp;&nbsp;•&nbsp;&nbsp;
-**[iamsaeed.dev](https://iamsaeed.dev)** — the portfolio, as a comic book you scroll through. Next.js, Three.js and GSAP.
+<!-- A table, not two inline images: inline ones wrap onto separate rows as soon as the
+     reader's window (or zoom) makes the content column narrower than both of them. -->
+<table>
+<tr>
+<td width="50%" valign="top" align="center">
+<a href="https://github.com/saeedkolivand/claude-usage-mac"><img alt="claude-usage-mac — Claude Code usage in the macOS menu bar and as a widget" src="assets/shots/claude-usage-mac.png" /></a>
+<br /><br />
+<b><a href="https://github.com/saeedkolivand/claude-usage-mac">claude-usage-mac</a></b> — Swift, SwiftUI and WidgetKit. Your Claude Code budget in the menu bar, before you hit the limit.
+</td>
+<td width="50%" valign="top" align="center">
+<a href="https://iamsaeed.dev"><img alt="saeed-kolivand-portfolio — a scroll-driven 3D portfolio told as a comic" src="assets/shots/portfolio.png" /></a>
+<br /><br />
+<b><a href="https://iamsaeed.dev">iamsaeed.dev</a></b> — the portfolio, as a comic book you scroll through. Next.js, Three.js and GSAP.
+</td>
+</tr>
+</table>
 
 ---
 

@@ -200,7 +200,7 @@ const heroCard = async () => {
 // Copied out of the project repos rather than hotlinked, so reorganising docs/ over there can
 // never leave a broken image here — the workflow fails loudly instead and the copy stays put.
 const SHOTS = [
-  ["ai-job-hunter-app", "apps/extension/store-assets/promo/marquee-1400x560.png", "job-hunter.png"],
+  ["ai-job-hunter-app", "branding/marketing/01-hero.png", "job-hunter.png"],
   ["claude-usage-mac", "docs/gallery/widget-medium.png", "claude-usage-mac.png"],
   ["saeed-kolivand-portfolio", "docs/readme/plates/00-cover.png", "portfolio.png"],
 ];
