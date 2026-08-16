@@ -2,7 +2,7 @@
 <rect x="0" y="0" width="720" height="210" rx="6" fill="#1a1b27"/>
 <line x1="240" y1="30" x2="240" y2="180" stroke="#2a2b3d" stroke-width="1"/>
 <line x1="480" y1="30" x2="480" y2="180" stroke="#2a2b3d" stroke-width="1"/>
-<text x="120" y="97" font-family="'Segoe UI',Ubuntu,sans-serif" font-size="42" font-weight="700" fill="#70a5fd" text-anchor="middle">3,246</text>
+<text x="120" y="97" font-family="'Segoe UI',Ubuntu,sans-serif" font-size="42" font-weight="700" fill="#70a5fd" text-anchor="middle">3,251</text>
 <text x="120" y="152" font-family="'Segoe UI',Ubuntu,sans-serif" font-size="20" font-weight="600" fill="#70a5fd" text-anchor="middle">Total Contributions</text>
 <text x="120" y="181" font-family="'Segoe UI',Ubuntu,sans-serif" font-size="18" font-weight="400" fill="#38bdae" text-anchor="middle">May 27, 2019 - Present</text>
 <circle cx="360" cy="84" r="48" fill="none" stroke="#70a5fd" stroke-width="5"/>
