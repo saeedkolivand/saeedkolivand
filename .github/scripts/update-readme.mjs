@@ -122,13 +122,13 @@ const LANG_COLOR = {
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const text = (x, y, s, { size = 14, weight = 400, fill = VALUE, anchor = "start" } = {}) =>
   `<text x="${x}" y="${y}" font-family="${FONT}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}">${esc(s)}</text>`;
-const card = (title, body) =>
-  `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="170" viewBox="0 0 400 170" role="img" aria-label="${esc(title)}">
-<rect x="0" y="0" width="400" height="170" rx="6" fill="${BG}"/>
-${text(25, 34, title, { size: 18, weight: 600, fill: TITLE })}
+const svgDoc = (w, h, label, body) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}">
+<rect x="0" y="0" width="${w}" height="${h}" rx="6" fill="${BG}"/>
 ${body}
 </svg>
 `;
+const card = (title, body) => svgDoc(400, 170, title, `${text(25, 34, title, { size: 18, weight: 600, fill: TITLE })}\n${body}`);
 
 // Replaces the github-readme-stats cards, which are rate-limited on the shared Vercel
 // instance and render as "Maximum retries exceeded" most of the day.
@@ -202,12 +202,90 @@ ${legend}`,
   console.log(`Wrote assets/github-stats.svg and assets/top-langs.svg (${top.length} languages).`);
 };
 
+// Same idea for the streak card: the contribution calendar is one GraphQL query per year
+// (the API caps a range at 12 months), so the whole history is one request with aliases.
+const streakCard = async () => {
+  const { user } = await gql(`{ user(login: "${USER}") { createdAt } }`);
+  const first = new Date(user.createdAt);
+  const today = new Date().toISOString().slice(0, 10);
+  const years = [];
+  for (let y = first.getUTCFullYear(); y <= Number(today.slice(0, 4)); y++) years.push(y);
+
+  const calendar = `contributionCalendar { weeks { contributionDays { date contributionCount } } }`;
+  const data = await gql(
+    `{ user(login: "${USER}") {
+      ${years.map((y) => `y${y}: contributionsCollection(from: "${y}-01-01T00:00:00Z", to: "${y}-12-31T23:59:59Z") { ${calendar} }`).join("\n      ")}
+    } }`,
+  );
+
+  // One flat day list, oldest first. Weeks overhang into the future, so drop days past today.
+  const days = years
+    .flatMap((y) => data.user[`y${y}`].contributionCalendar.weeks.flatMap((w) => w.contributionDays))
+    .filter((d) => d.date <= today)
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const total = days.reduce((sum, d) => sum + d.contributionCount, 0);
+
+  let longest = { length: 0 }, run = 0;
+  days.forEach((d, i) => {
+    run = d.contributionCount > 0 ? run + 1 : 0;
+    if (run > longest.length) longest = { length: run, from: days[i - run + 1].date, to: d.date };
+  });
+
+  // A quiet today does not break the streak — it just hasn't been earned yet, same as the
+  // card this replaces. A quiet yesterday does.
+  let end = days.length - 1;
+  if (days[end]?.contributionCount === 0) end--;
+  let start = end;
+  while (start >= 0 && days[start].contributionCount > 0) start--;
+  const current = { length: end - start, from: days[start + 1]?.date, to: days[end]?.date };
+  // Cheap check on the two loops above: the current streak is one of the runs longest saw.
+  if (current.length > longest.length) throw new Error(`streak math is off: current ${current.length} > longest ${longest.length}`);
+
+  const day = (iso) => {
+    const d = new Date(`${iso}T00:00:00Z`);
+    const opts = { month: "short", day: "numeric", timeZone: "UTC" };
+    if (d.getUTCFullYear() !== new Date().getUTCFullYear()) opts.year = "numeric";
+    return d.toLocaleDateString("en-US", opts);
+  };
+  const range = (s) => (s.length ? (s.from === s.to ? day(s.from) : `${day(s.from)} - ${day(s.to)}`) : "—");
+
+  const column = (x, value, label, dates, color) =>
+    [
+      text(x, 97, value.toLocaleString("en-US"), { size: 42, weight: 700, fill: color, anchor: "middle" }),
+      text(x, 152, label, { size: 16, weight: 600, fill: color, anchor: "middle" }),
+      text(x, 178, dates, { size: 14, fill: LABEL, anchor: "middle" }),
+    ].join("\n");
+
+  const streak = svgDoc(
+    720,
+    210,
+    "GitHub contribution streak",
+    [
+      `<line x1="240" y1="30" x2="240" y2="180" stroke="#2a2b3d" stroke-width="1"/>`,
+      `<line x1="480" y1="30" x2="480" y2="180" stroke="#2a2b3d" stroke-width="1"/>`,
+      column(120, total, "Total Contributions", `${day(user.createdAt.slice(0, 10))} - Present`, TITLE),
+      // The ring is the current streak's badge — gap at the top for the flame, like the original.
+      `<circle cx="360" cy="84" r="48" fill="none" stroke="${TITLE}" stroke-width="5"/>`,
+      `<rect x="344" y="28" width="32" height="16" fill="${BG}"/>`,
+      text(360, 42, "🔥", { size: 18, anchor: "middle" }),
+      column(360, current.length, "Current Streak", range(current), "#bf91f3"),
+      column(600, longest.length, "Longest Streak", range(longest), TITLE),
+    ].join("\n"),
+  );
+
+  await writeFile("assets/streak.svg", streak);
+  console.log(`Wrote assets/streak.svg (${total} contributions, ${current.length}-day current, ${longest.length}-day longest).`);
+};
+
 let md = await readFile(FILE, "utf8");
 md = replaceRegion(md, "BUILDING", building);
 md = replaceRegion(md, "FEATURED", featured);
 md = replaceRegion(md, "ACTIVITY", activity);
-if (process.env.GITHUB_TOKEN) await statsRegion();
-else console.warn("No GITHUB_TOKEN — leaving the stat cards in assets/ unchanged.");
+if (process.env.GITHUB_TOKEN) {
+  await statsRegion();
+  await streakCard();
+} else console.warn("No GITHUB_TOKEN — leaving the stat cards in assets/ unchanged.");
 await writeFile(FILE, md);
 
 console.log(`Updated ${FILE}: ${BUILDING} building, ${FEATURED} featured, ${shown.length} activity entries.`);

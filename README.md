@@ -107,7 +107,7 @@ const saeed = {
 <img alt="Saeed's GitHub statistics" height="170" src="assets/github-stats.svg" />
 <img alt="Most used languages" height="170" src="assets/top-langs.svg" />
 
-<img alt="GitHub contribution streak" width="720" src="https://streak-stats.demolab.com?user=saeedkolivand&theme=tokyonight&hide_border=true" />
+<img alt="GitHub contribution streak" width="720" src="assets/streak.svg" />
 
 </div>
 
