@@ -281,6 +281,21 @@ const streakCard = async () => {
 
 // --- Cards that need no GitHub data: the stack strips and the link badges. ---
 
+// The header is readme-typing-svg's own output — same font, colours and timing as before —
+// but vendored by the workflow instead of hotlinked by the README. Their SVG embeds Inter as
+// a data URI, so the committed copy has no external references. Same bytes every request, so
+// this only produces a commit when the lines below actually change.
+const TYPING_SVG =
+  "https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=620" +
+  "&lines=Front-End+Engineer%2C+6%2B+years;React+%7C+Next.js+%7C+TypeScript;Building+local-first+AI+dev+tools;Clean+architecture%2C+shipped+products";
+
+const headerCard = async () => {
+  const res = await fetch(TYPING_SVG);
+  if (!res.ok) throw new Error(`GET readme-typing-svg -> ${res.status} ${res.statusText}`);
+  await writeFile("assets/header.svg", await res.text());
+  console.log("Wrote assets/header.svg.");
+};
+
 // Brand hex per icon: near-black brands (Next.js, GitHub) get a light stand-in so they stay
 // visible on the dark card, and Rust reuses the tone the language bar already uses.
 const STACK = {
@@ -331,6 +346,7 @@ const badge = async (name, label, slug, color) => {
 };
 
 await mkdir("assets", { recursive: true });
+await headerCard();
 await stackStrip("stack-build", STACK.build);
 await stackStrip("stack-ship", STACK.ship, ["assets/comfyui.svg"]);
 await Promise.all([
