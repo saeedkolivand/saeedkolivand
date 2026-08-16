@@ -252,9 +252,10 @@ const streakCard = async () => {
 
   const column = (x, value, label, dates, color) =>
     [
+      // Sized so a phone, which renders this 720-wide card at ~0.5x, still lands near 10px.
       text(x, 97, value.toLocaleString("en-US"), { size: 42, weight: 700, fill: color, anchor: "middle" }),
-      text(x, 152, label, { size: 16, weight: 600, fill: color, anchor: "middle" }),
-      text(x, 178, dates, { size: 14, fill: LABEL, anchor: "middle" }),
+      text(x, 152, label, { size: 20, weight: 600, fill: color, anchor: "middle" }),
+      text(x, 181, dates, { size: 18, fill: LABEL, anchor: "middle" }),
     ].join("\n");
 
   const streak = svgDoc(
@@ -277,6 +278,112 @@ const streakCard = async () => {
   await writeFile("assets/streak.svg", streak);
   console.log(`Wrote assets/streak.svg (${total} contributions, ${current.length}-day current, ${longest.length}-day longest).`);
 };
+
+// --- Cards that need no GitHub data: the header, the stack strips and the link badges. ---
+
+const MONO = "ui-monospace,'Cascadia Code','Fira Code',Consolas,monospace";
+const TAGLINES = [
+  "Front-End Engineer, 6+ years",
+  "React | Next.js | TypeScript",
+  "Building local-first AI dev tools",
+  "Clean architecture, shipped products",
+];
+
+// textLength pins the rendered width to what the geometry below assumes, so the typing clip
+// and the cursor stay aligned whichever monospace font the viewer actually has.
+const mono = (x, y, s, fill, size = 16, extra = "") =>
+  `<text x="${x}" y="${y}" font-family="${MONO}" font-size="${size}" fill="${fill}" textLength="${(s.length * size * 0.6).toFixed(1)}" lengthAdjust="spacingAndGlyphs" xml:space="preserve"${extra}>${esc(s)}</text>`;
+
+const headerCard = async () => {
+  const SIZE = 16, CW = SIZE * 0.6, SLOT = 4, RUN = TAGLINES.length * SLOT, X = 20 + 2 * CW, Y = 124;
+  // Each line owns a 4s slot of one shared loop: type for 1.2s, hold, wipe, then wait its turn.
+  const at = (s) => (s / RUN).toFixed(4);
+  const keyTimes = `0;${at(1.2)};${at(3.4)};${at(3.6)};1`;
+  const anim = (attr, values, i) =>
+    `<animate attributeName="${attr}" values="${values}" keyTimes="${keyTimes}" dur="${RUN}s" begin="${i * SLOT}s" repeatCount="indefinite"/>`;
+
+  const typed = TAGLINES.map((t, i) => {
+    const w = t.length * CW;
+    return `<clipPath id="type${i}"><rect x="${X}" y="${Y - 14}" width="0" height="20">${anim("width", `0;${w};${w};0;0`, i)}</rect></clipPath>
+${mono(X, Y, t, LABEL, SIZE, ` clip-path="url(#type${i})"`)}
+<rect x="${X}" y="${Y - 13}" width="${CW}" height="18" fill="${TITLE}" opacity="0">${anim("x", `${X};${X + w};${X + w};${X};${X}`, i)}${anim("opacity", "1;1;1;0;0", i)}</rect>`;
+  }).join("\n");
+
+  await writeFile(
+    "assets/header.svg",
+    svgDoc(620, 160, "Saeed Kolivand — Front-End Engineer", [
+      `<rect x="0" y="0" width="620" height="36" rx="8" fill="#16161e"/><rect x="0" y="28" width="620" height="8" fill="#16161e"/>`,
+      `<circle cx="20" cy="18" r="5" fill="#ff5f56"/><circle cx="38" cy="18" r="5" fill="#ffbd2e"/><circle cx="56" cy="18" r="5" fill="#27c93f"/>`,
+      mono(310 - "saeed@github — zsh".length * 4.2, 23, "saeed@github — zsh", "#565f89", 14),
+      mono(20, 68, "$ ", "#9ece6a") + mono(20 + 2 * CW, 68, "whoami", VALUE),
+      mono(20, 96, "Saeed Kolivand · Front-End Engineer · Cologne", TITLE),
+      mono(20, Y, "$ ", "#9ece6a"),
+      // Blink lives on the group, so it multiplies with each cursor's own visibility window.
+      `<g><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.49;0.5;1" dur="1.06s" repeatCount="indefinite"/>\n${typed}</g>`,
+    ].join("\n")),
+  );
+  console.log("Wrote assets/header.svg.");
+};
+
+// Brand hex per icon: near-black brands (Next.js, GitHub) get a light stand-in so they stay
+// visible on the dark card, and Rust reuses the tone the language bar already uses.
+const STACK = {
+  build: [["typescript", "#3178C6"], ["javascript", "#F7DF1E"], ["react", "#61DAFB"], ["nextdotjs", "#FFFFFF"],
+    ["nodedotjs", "#5FA04E"], ["rust", "#DEA584"], ["tailwindcss", "#06B6D4"], ["jest", "#C21325"]],
+  ship: [["git", "#F05032"], ["github", "#FFFFFF"], ["visualstudiocode", "#007ACC"], ["vite", "#646CFF"],
+    ["figma", "#F24E1E"], ["tauri", "#24C8DB"]],
+};
+
+const iconPath = async (slug) => {
+  const res = await fetch(`https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/${slug}.svg`);
+  if (!res.ok) throw new Error(`simple-icons ${slug} -> ${res.status}`);
+  return (await res.text()).match(/<path[^>]*\sd="([^"]+)"/)[1];
+};
+
+const stackStrip = async (name, icons, extras = []) => {
+  const SIZE = 40, GAP = 22, PAD = 22;
+  const paths = await Promise.all(icons.map(([slug]) => iconPath(slug)));
+  const at = (i) => PAD + i * (SIZE + GAP);
+  const glyphs = paths.map((d, i) => `<path d="${d}" fill="${icons[i][1]}" transform="translate(${at(i)},20) scale(${SIZE / 24})"/>`);
+  // ComfyUI has no simple-icon, so its logomark is vendored in assets/ and nested as-is.
+  const nested = await Promise.all(
+    extras.map(async (file, i) => {
+      const raw = await readFile(file, "utf8");
+      const box = raw.match(/viewBox="([^"]+)"/)[1];
+      const inner = raw.replace(/^[\s\S]*?<svg[^>]*>/, "").replace(/<\/svg>\s*$/, "");
+      return `<svg x="${at(icons.length + i)}" y="20" width="${SIZE}" height="${SIZE}" viewBox="${box}">${inner}</svg>`;
+    }),
+  );
+  const count = icons.length + extras.length;
+  await writeFile(`assets/${name}.svg`, svgDoc(PAD * 2 + count * SIZE + (count - 1) * GAP, 80, `${name} stack`, [...glyphs, ...nested].join("\n")));
+  console.log(`Wrote assets/${name}.svg (${count} icons).`);
+};
+
+// shields.io's for-the-badge look, minus shields.io. The link stays in the README markdown,
+// so these are still clickable.
+const badge = async (name, label, slug, color) => {
+  const H = 28, SIZE = 11, CW = 8.4, logo = 15;
+  const w = 14 + logo + 8 + label.length * CW + 14;
+  await writeFile(
+    `assets/badge-${name}.svg`,
+    svgDoc(w, H, label, [
+      `<rect x="0" y="0" width="${w}" height="${H}" rx="4" fill="${color}"/>`,
+      `<path d="${await iconPath(slug)}" fill="#fff" transform="translate(14,${(H - logo) / 2}) scale(${logo / 24})"/>`,
+      `<text x="${14 + logo + 8}" y="${H / 2 + 4}" font-family="${FONT}" font-size="${SIZE}" font-weight="700" fill="#fff" letter-spacing="1.5" textLength="${(label.length * CW).toFixed(1)}" lengthAdjust="spacing">${esc(label)}</text>`,
+    ].join("\n")),
+  );
+};
+
+await mkdir("assets", { recursive: true });
+await headerCard();
+await stackStrip("stack-build", STACK.build);
+await stackStrip("stack-ship", STACK.ship, ["assets/comfyui.svg"]);
+await Promise.all([
+  badge("portfolio", "IAMSAEED.DEV", "googlechrome", "#E2574C"),
+  badge("linkedin", "LINKEDIN", "linkedin", "#0A66C2"),
+  badge("email", "EMAIL", "gmail", "#EA4335"),
+]);
+console.log("Wrote assets/badge-*.svg.");
 
 let md = await readFile(FILE, "utf8");
 md = replaceRegion(md, "BUILDING", building);

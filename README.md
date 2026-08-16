@@ -6,13 +6,13 @@
 
 I build production React & Next.js apps — and local-first AI tooling for developers.
 
-<img alt="React, Next.js and TypeScript engineer building local-first AI developer tools" src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Front-End+Engineer%2C+6%2B+years;React+%7C+Next.js+%7C+TypeScript;Building+local-first+AI+dev+tools;Clean+architecture%2C+shipped+products" />
+<img alt="React, Next.js and TypeScript engineer building local-first AI developer tools" width="620" src="assets/header.svg" />
 
 <br/>
 
-[![Portfolio](https://img.shields.io/badge/Portfolio-iamsaeed.dev-E2574C?style=for-the-badge&logo=googlechrome&logoColor=white)](https://iamsaeed.dev)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/saeedkolivand)
-[![Email](https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:saeedkolivand1997@gmail.com)
+[![Portfolio](assets/badge-portfolio.svg)](https://iamsaeed.dev)
+[![LinkedIn](assets/badge-linkedin.svg)](https://www.linkedin.com/in/saeedkolivand)
+[![Email](assets/badge-email.svg)](mailto:saeedkolivand1997@gmail.com)
 
 </div>
 
@@ -75,13 +75,11 @@ const saeed = {
 
 **Build**
 
-<img alt="TypeScript, JavaScript, React, Next.js, Node.js, Rust, Tailwind CSS, Jest" src="https://skillicons.dev/icons?i=ts,js,react,nextjs,nodejs,rust,tailwind,jest" />
+<img alt="TypeScript, JavaScript, React, Next.js, Node.js, Rust, Tailwind CSS, Jest" src="assets/stack-build.svg" />
 
 **Ship**
 
-<img alt="Git, GitHub, VS Code, Vite, Figma, Tauri" src="https://skillicons.dev/icons?i=git,github,vscode,vite,figma,tauri" />
-<!-- skillicons has no ComfyUI icon — using their own logomark, matched to the 48px icon height -->
-<img alt="ComfyUI" height="48" src="https://raw.githubusercontent.com/Comfy-Org/ComfyUI_frontend/main/apps/website/public/icons/logomark.svg" />
+<img alt="Git, GitHub, VS Code, Vite, Figma, Tauri, ComfyUI" src="assets/stack-ship.svg" />
 
 </div>
 
