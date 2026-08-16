@@ -1,6 +1,6 @@
 // Regenerates the marker-delimited regions of README.md from the GitHub API.
 // No dependencies: Node's built-in fetch. Run it locally with `node .github/scripts/update-readme.mjs`.
-import { readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 
 const USER = "saeedkolivand"; // ponytail: hardcoded — it's a profile repo for exactly one person
 const FILE = "README.md";
@@ -104,6 +104,32 @@ const shown = events
   .slice(0, ACTIVITY);
 const activity = shown.map((e) => e.text).join("\n\n");
 
+// tokyonight, so the generated cards match the streak card next to them.
+const BG = "#1a1b27";
+const TITLE = "#70a5fd";
+const LABEL = "#38bdae";
+const VALUE = "#a9fef7";
+const FONT = "'Segoe UI',Ubuntu,sans-serif";
+
+// ponytail: linguist colors for the languages that actually show up, grey for the rest
+const LANG_COLOR = {
+  TypeScript: "#3178c6", JavaScript: "#f1e05a", Rust: "#dea584", Swift: "#F05138",
+  CSS: "#563d7c", SCSS: "#c6538c", HTML: "#e34c26", Python: "#3572A5", Shell: "#89e051",
+  Vue: "#41b883", Svelte: "#ff3e00", Go: "#00ADD8", Java: "#b07219", Kotlin: "#A97BFF",
+  Dart: "#00B4AB", Ruby: "#701516", C: "#555555", "C++": "#f34b7d", Typst: "#239dad", MDX: "#fcb32c",
+};
+
+const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+const text = (x, y, s, { size = 14, weight = 400, fill = VALUE, anchor = "start" } = {}) =>
+  `<text x="${x}" y="${y}" font-family="${FONT}" font-size="${size}" font-weight="${weight}" fill="${fill}" text-anchor="${anchor}">${esc(s)}</text>`;
+const card = (title, body) =>
+  `<svg xmlns="http://www.w3.org/2000/svg" width="400" height="170" viewBox="0 0 400 170" role="img" aria-label="${esc(title)}">
+<rect x="0" y="0" width="400" height="170" rx="6" fill="${BG}"/>
+${text(25, 34, title, { size: 18, weight: 600, fill: TITLE })}
+${body}
+</svg>
+`;
+
 // Replaces the github-readme-stats cards, which are rate-limited on the shared Vercel
 // instance and render as "Maximum retries exceeded" most of the day.
 const statsRegion = async () => {
@@ -119,11 +145,22 @@ const statsRegion = async () => {
 
   const nodes = user.repositories.nodes;
   const n = (v) => v.toLocaleString("en-US");
-  const table = [
-    "| ⭐ Stars | 📦 Repos | 🔀 PRs | 🐛 Issues | 💾 Commits (past year) |",
-    "| --: | --: | --: | --: | --: |",
-    `| ${n(nodes.reduce((sum, r) => sum + r.stargazerCount, 0))} | ${n(user.repositories.totalCount)} | ${n(user.pullRequests.totalCount)} | ${n(user.issues.totalCount)} | ${n(user.contributionsCollection.totalCommitContributions)} |`,
-  ].join("\n");
+  const rows = [
+    ["Total Stars Earned", nodes.reduce((sum, r) => sum + r.stargazerCount, 0)],
+    ["Total Commits (past year)", user.contributionsCollection.totalCommitContributions],
+    ["Total PRs", user.pullRequests.totalCount],
+    ["Total Issues", user.issues.totalCount],
+    ["Public Repositories", user.repositories.totalCount],
+  ];
+  const stats = card(
+    "Saeed's GitHub Stats",
+    rows
+      .map(([label, value], i) => {
+        const y = 66 + i * 22;
+        return text(25, y, label, { fill: LABEL }) + text(375, y, n(value), { weight: 600, anchor: "end" });
+      })
+      .join("\n"),
+  );
 
   // Bytes per language across every public repo — same measure the top-langs card used.
   const bytes = {};
@@ -131,24 +168,46 @@ const statsRegion = async () => {
   const total = Object.values(bytes).reduce((a, b) => a + b, 0) || 1;
   const top = Object.entries(bytes)
     .sort((a, b) => b[1] - a[1])
-    .slice(0, 6);
-  const width = Math.max(...top.map(([name]) => name.length));
-  const bars = top
-    .map(([name, size]) => {
-      const pct = (size / total) * 100;
-      return `${name.padEnd(width)}  ${"█".repeat(Math.round(pct / 5)).padEnd(20, "░")}  ${pct.toFixed(1).padStart(4)}%`;
+    .slice(0, 6)
+    .map(([name, size]) => ({ name, pct: (size / total) * 100, color: LANG_COLOR[name] ?? "#858585" }));
+
+  // The bar is clipped to a rounded rect so the segments can stay plain rects.
+  let x = 25;
+  const segments = top
+    .map(({ pct, color }) => {
+      const w = (pct / 100) * 350;
+      const seg = `<rect x="${x.toFixed(1)}" y="52" width="${w.toFixed(1)}" height="10" fill="${color}"/>`;
+      x += w;
+      return seg;
     })
     .join("\n");
+  const legend = top
+    .map(({ name, pct, color }, i) => {
+      const cx = 30 + (i % 2) * 185;
+      const cy = 92 + Math.floor(i / 2) * 24;
+      return `<circle cx="${cx}" cy="${cy}" r="5" fill="${color}"/>` + text(cx + 12, cy + 4, `${name} ${pct.toFixed(1)}%`, { fill: LABEL });
+    })
+    .join("\n");
+  const langs = card(
+    "Most Used Languages",
+    `<clipPath id="bar"><rect x="25" y="52" width="350" height="10" rx="5"/></clipPath>
+<g clip-path="url(#bar)"><rect x="25" y="52" width="350" height="10" fill="#2a2b3d"/>
+${segments}</g>
+${legend}`,
+  );
 
-  return `${table}\n\n\`\`\`text\n${bars}\n\`\`\``;
+  await mkdir("assets", { recursive: true });
+  await writeFile("assets/github-stats.svg", stats);
+  await writeFile("assets/top-langs.svg", langs);
+  console.log(`Wrote assets/github-stats.svg and assets/top-langs.svg (${top.length} languages).`);
 };
 
 let md = await readFile(FILE, "utf8");
 md = replaceRegion(md, "BUILDING", building);
 md = replaceRegion(md, "FEATURED", featured);
 md = replaceRegion(md, "ACTIVITY", activity);
-if (process.env.GITHUB_TOKEN) md = replaceRegion(md, "STATS", await statsRegion());
-else console.warn("No GITHUB_TOKEN — leaving the STATS region unchanged.");
+if (process.env.GITHUB_TOKEN) await statsRegion();
+else console.warn("No GITHUB_TOKEN — leaving the stat cards in assets/ unchanged.");
 await writeFile(FILE, md);
 
 console.log(`Updated ${FILE}: ${BUILDING} building, ${FEATURED} featured, ${shown.length} activity entries.`);
