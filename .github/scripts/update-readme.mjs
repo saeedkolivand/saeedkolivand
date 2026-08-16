@@ -279,51 +279,7 @@ const streakCard = async () => {
   console.log(`Wrote assets/streak.svg (${total} contributions, ${current.length}-day current, ${longest.length}-day longest).`);
 };
 
-// --- Cards that need no GitHub data: the header, the stack strips and the link badges. ---
-
-const MONO = "ui-monospace,'Cascadia Code','Fira Code',Consolas,monospace";
-const TAGLINES = [
-  "Front-End Engineer, 6+ years",
-  "React | Next.js | TypeScript",
-  "Building local-first AI dev tools",
-  "Clean architecture, shipped products",
-];
-
-// textLength pins the rendered width to what the geometry below assumes, so the typing clip
-// and the cursor stay aligned whichever monospace font the viewer actually has.
-const mono = (x, y, s, fill, size = 16, extra = "") =>
-  `<text x="${x}" y="${y}" font-family="${MONO}" font-size="${size}" fill="${fill}" textLength="${(s.length * size * 0.6).toFixed(1)}" lengthAdjust="spacingAndGlyphs" xml:space="preserve"${extra}>${esc(s)}</text>`;
-
-const headerCard = async () => {
-  const SIZE = 16, CW = SIZE * 0.6, SLOT = 4, RUN = TAGLINES.length * SLOT, X = 20 + 2 * CW, Y = 124;
-  // Each line owns a 4s slot of one shared loop: type for 1.2s, hold, wipe, then wait its turn.
-  const at = (s) => (s / RUN).toFixed(4);
-  const keyTimes = `0;${at(1.2)};${at(3.4)};${at(3.6)};1`;
-  const anim = (attr, values, i) =>
-    `<animate attributeName="${attr}" values="${values}" keyTimes="${keyTimes}" dur="${RUN}s" begin="${i * SLOT}s" repeatCount="indefinite"/>`;
-
-  const typed = TAGLINES.map((t, i) => {
-    const w = t.length * CW;
-    return `<clipPath id="type${i}"><rect x="${X}" y="${Y - 14}" width="0" height="20">${anim("width", `0;${w};${w};0;0`, i)}</rect></clipPath>
-${mono(X, Y, t, LABEL, SIZE, ` clip-path="url(#type${i})"`)}
-<rect x="${X}" y="${Y - 13}" width="${CW}" height="18" fill="${TITLE}" opacity="0">${anim("x", `${X};${X + w};${X + w};${X};${X}`, i)}${anim("opacity", "1;1;1;0;0", i)}</rect>`;
-  }).join("\n");
-
-  await writeFile(
-    "assets/header.svg",
-    svgDoc(620, 160, "Saeed Kolivand — Front-End Engineer", [
-      `<rect x="0" y="0" width="620" height="36" rx="8" fill="#16161e"/><rect x="0" y="28" width="620" height="8" fill="#16161e"/>`,
-      `<circle cx="20" cy="18" r="5" fill="#ff5f56"/><circle cx="38" cy="18" r="5" fill="#ffbd2e"/><circle cx="56" cy="18" r="5" fill="#27c93f"/>`,
-      mono(310 - "saeed@github — zsh".length * 4.2, 23, "saeed@github — zsh", "#565f89", 14),
-      mono(20, 68, "$ ", "#9ece6a") + mono(20 + 2 * CW, 68, "whoami", VALUE),
-      mono(20, 96, "Saeed Kolivand · Front-End Engineer · Cologne", TITLE),
-      mono(20, Y, "$ ", "#9ece6a"),
-      // Blink lives on the group, so it multiplies with each cursor's own visibility window.
-      `<g><animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.49;0.5;1" dur="1.06s" repeatCount="indefinite"/>\n${typed}</g>`,
-    ].join("\n")),
-  );
-  console.log("Wrote assets/header.svg.");
-};
+// --- Cards that need no GitHub data: the stack strips and the link badges. ---
 
 // Brand hex per icon: near-black brands (Next.js, GitHub) get a light stand-in so they stay
 // visible on the dark card, and Rust reuses the tone the language bar already uses.
@@ -375,7 +331,6 @@ const badge = async (name, label, slug, color) => {
 };
 
 await mkdir("assets", { recursive: true });
-await headerCard();
 await stackStrip("stack-build", STACK.build);
 await stackStrip("stack-ship", STACK.ship, ["assets/comfyui.svg"]);
 await Promise.all([

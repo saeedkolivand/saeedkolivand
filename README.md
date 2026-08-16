@@ -6,7 +6,7 @@
 
 I build production React & Next.js apps — and local-first AI tooling for developers.
 
-<img alt="React, Next.js and TypeScript engineer building local-first AI developer tools" width="620" src="assets/header.svg" />
+<img alt="React, Next.js and TypeScript engineer building local-first AI developer tools" src="https://readme-typing-svg.demolab.com?font=Inter&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=620&lines=Front-End+Engineer%2C+6%2B+years;React+%7C+Next.js+%7C+TypeScript;Building+local-first+AI+dev+tools;Clean+architecture%2C+shipped+products" />
 
 <br/>
 
