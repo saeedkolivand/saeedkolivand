@@ -88,11 +88,11 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-08-16` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-17` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-16` &nbsp; Opened PR [#997](https://github.com/saeedkolivand/ai-job-hunter-app/pull/997) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-16` &nbsp; Opened PR [#999](https://github.com/saeedkolivand/ai-job-hunter-app/pull/999) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-16` &nbsp; Released [v0.136.2](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.136.2) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-17` &nbsp; Released [v0.137.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.137.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
