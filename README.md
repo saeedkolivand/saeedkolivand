@@ -42,7 +42,7 @@
 <!-- FEATURED:START -->
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
-| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 46 |
+| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 45 |
 | **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 13 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 11 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 9 |
@@ -53,8 +53,8 @@
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 <!-- BUILDING:END -->
 
 ---
@@ -88,11 +88,9 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-08-17` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-18` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-16` &nbsp; Opened PR [#999](https://github.com/saeedkolivand/ai-job-hunter-app/pull/999) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-08-17` &nbsp; Released [v0.137.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.137.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-18` &nbsp; Opened PR [#1017](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1017) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
