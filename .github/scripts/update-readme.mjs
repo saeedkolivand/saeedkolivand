@@ -132,14 +132,15 @@ const shown = events
 const activity = shown.map((e) => e.text).join("\n\n");
 
 // --- Look and feel -----------------------------------------------------------------------
-// Lifted from the portfolio (iamsaeed.dev), which is art-directed as a comic book: paper
-// #f2ead9, that red, halftone screentone, heavy inked panel borders. The profile used to be
-// generic dark-blue card defaults, which looked like everybody else's.
-const PAPER = "#f2ead9";
-const INK = "#1c1a17";
+// The portfolio's comic art direction (iamsaeed.dev), printed on black stock: the paper is
+// near-black, the ink is that cream, and the red still sits behind the type like a
+// misregistered run. Dark either way, so it reads the same in both GitHub themes.
+const PAPER = "#15120f";
+const INK = "#f2ead9";
+const SHADOW = "#e2574c";
 const RED = "#e2574c";
-const TEAL = "#2f9e95";
-const MUTED = "#7a7264";
+const TEAL = "#43c2b7";
+const MUTED = "#a2988a";
 const FONT = "'Segoe UI',Ubuntu,Helvetica,sans-serif";
 const HEAVY = "'Arial Black','Helvetica Neue',Impact,sans-serif";
 const MONO = "ui-monospace,Consolas,monospace";
@@ -152,7 +153,7 @@ const text = (x, y, s, { size = 14, weight = 400, fill = INK, anchor = "start", 
 const svgDoc = (w, h, label, body, { pattern = true } = {}) =>
   `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-label="${esc(label)}">
 <defs><pattern id="tone" width="6" height="6" patternUnits="userSpaceOnUse"><circle cx="1.5" cy="1.5" r="1.1" fill="${INK}" opacity="0.06"/></pattern></defs>
-<rect x="6" y="6" width="${w - 6}" height="${h - 6}" fill="${INK}"/>
+<rect x="6" y="6" width="${w - 6}" height="${h - 6}" fill="${SHADOW}"/>
 <rect x="1.5" y="1.5" width="${w - 9}" height="${h - 9}" fill="${PAPER}" stroke="${INK}" stroke-width="3"/>
 ${pattern ? `<rect x="3" y="3" width="${w - 12}" height="${h - 12}" fill="url(#tone)"/>` : ""}
 ${body}
@@ -182,14 +183,14 @@ const heroCard = async () => {
     "assets/hero.svg",
     svgDoc(W, H, "Saeed Kolivand — Front-End Engineer, Cologne", [
       `<style>@font-face{font-family:'Bangers';font-style:normal;font-weight:400;src:url(data:font/truetype;base64,${font}) format('truetype');}</style>`,
-      text(W / 2, 62, "ISSUE #2  ·  COLOGNE, GERMANY  ·  EST. 2019", { size: 13, fill: MUTED, anchor: "middle", font: MONO, spacing: 2.5 }),
+      text(W / 2, 62, "COLOGNE, GERMANY", { size: 13, fill: MUTED, anchor: "middle", font: MONO, spacing: 2.5 }),
       // Red sits a few pixels behind the ink, the way a misregistered print run looks.
       display(W / 2 + 4, 152, "SAEED KOLIVAND", 88, RED),
       display(W / 2, 148, "SAEED KOLIVAND", 88, INK),
       `<rect x="150" y="176" width="${W - 300}" height="42" fill="${RED}"/>`,
       `<rect x="150" y="176" width="${W - 300}" height="42" fill="none" stroke="${INK}" stroke-width="3"/>`,
-      text(W / 2, 204, "ONE DEV. THREE WORLDS. ZERO GHOSTING.", { size: 18, weight: 900, fill: PAPER, anchor: "middle", font: HEAVY, spacing: 1.5 }),
-      text(W / 2, 248, "Local-first AI tooling · React & Next.js on the web · Rust + Tauri on the desktop · SwiftUI on the Mac", { size: 14, fill: INK, anchor: "middle" }),
+      text(W / 2, 204, "FRONT-END ENGINEER", { size: 18, weight: 900, fill: INK, anchor: "middle", font: HEAVY, spacing: 1.5 }),
+      text(W / 2, 248, "Local-first AI tooling · React & Next.js on the web · Rust + Tauri on the desktop", { size: 14, fill: INK, anchor: "middle" }),
       text(W / 2, 272, "iamsaeed.dev", { size: 13, fill: TEAL, anchor: "middle", font: MONO, spacing: 1.5 }),
     ].join("\n")),
   );
@@ -405,10 +406,10 @@ const badge = async (name, label, slug, color) => {
   await writeFile(
     `assets/badge-${name}.svg`,
     `<svg xmlns="http://www.w3.org/2000/svg" width="${w + 5}" height="${H + 5}" viewBox="0 0 ${w + 5} ${H + 5}" role="img" aria-label="${esc(label)}">
-<rect x="5" y="5" width="${w}" height="${H}" fill="${INK}"/>
+<rect x="5" y="5" width="${w}" height="${H}" fill="${SHADOW}"/>
 <rect x="1.5" y="1.5" width="${w - 3}" height="${H - 3}" fill="${color}" stroke="${INK}" stroke-width="3"/>
-<path d="${await iconPath(slug)}" fill="${PAPER}" transform="translate(16,${(H - logo) / 2}) scale(${logo / 24})"/>
-<text x="${16 + logo + 9}" y="${H / 2 + 5}" font-family="${HEAVY}" font-size="12" font-weight="900" fill="${PAPER}" letter-spacing="1.4" textLength="${(label.length * CW).toFixed(1)}" lengthAdjust="spacing">${esc(label)}</text>
+<path d="${await iconPath(slug)}" fill="${INK}" transform="translate(16,${(H - logo) / 2}) scale(${logo / 24})"/>
+<text x="${16 + logo + 9}" y="${H / 2 + 5}" font-family="${HEAVY}" font-size="12" font-weight="900" fill="${INK}" letter-spacing="1.4" textLength="${(label.length * CW).toFixed(1)}" lengthAdjust="spacing">${esc(label)}</text>
 </svg>
 `,
   );
@@ -422,7 +423,7 @@ await stackStrip("stack-ship", STACK.ship, ["assets/comfyui.svg"]);
 await Promise.all([
   badge("portfolio", "IAMSAEED.DEV", "googlechrome", RED),
   badge("linkedin", "LINKEDIN", "linkedin", "#0A66C2"),
-  badge("email", "EMAIL", "gmail", INK),
+  badge("email", "EMAIL", "gmail", PAPER),
 ]);
 console.log("Wrote assets/badge-*.svg.");
 

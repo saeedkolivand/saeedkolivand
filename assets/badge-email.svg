@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="104" height="39" viewBox="0 0 104 39" role="img" aria-label="EMAIL">
-<rect x="5" y="5" width="99" height="34" fill="#1c1a17"/>
-<rect x="1.5" y="1.5" width="96" height="31" fill="#1c1a17" stroke="#1c1a17" stroke-width="3"/>
+<rect x="5" y="5" width="99" height="34" fill="#e2574c"/>
+<rect x="1.5" y="1.5" width="96" height="31" fill="#15120f" stroke="#f2ead9" stroke-width="3"/>
 <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" fill="#f2ead9" transform="translate(16,9.5) scale(0.625)"/>
 <text x="40" y="22" font-family="'Arial Black','Helvetica Neue',Impact,sans-serif" font-size="12" font-weight="900" fill="#f2ead9" letter-spacing="1.4" textLength="43.0" lengthAdjust="spacing">EMAIL</text>
 </svg>
