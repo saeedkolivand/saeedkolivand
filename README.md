@@ -42,9 +42,9 @@
 <!-- FEATURED:START -->
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
-| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 48 |
+| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 50 |
 | **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 13 |
-| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 12 |
+| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 13 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 10 |
 | **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | Three.js · WebGL · GSAP | 8 |
 <!-- FEATURED:END -->
@@ -52,8 +52,8 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
 <!-- BUILDING:END -->
 
@@ -88,13 +88,11 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-08-20` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-21` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-20` &nbsp; Opened PR [#1055](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1055) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-21` &nbsp; Opened PR [#1064](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1064) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-08-19` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
-
-`2026-08-19` &nbsp; Released [v0.138.1](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.138.1) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-08-20` &nbsp; Released [v0.139.3](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.139.3) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
