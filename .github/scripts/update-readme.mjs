@@ -34,9 +34,9 @@ const gql = async (query) => {
   return data;
 };
 
-const raw = async (repo, path) => {
-  const res = await fetch(`https://raw.githubusercontent.com/${USER}/${repo}/HEAD/${path}`);
-  if (!res.ok) throw new Error(`GET ${repo}/${path} -> ${res.status} ${res.statusText}`);
+const raw = async (repo, path, ref = "HEAD") => {
+  const res = await fetch(`https://raw.githubusercontent.com/${USER}/${repo}/${ref}/${path}`);
+  if (!res.ok) throw new Error(`GET ${repo}@${ref}/${path} -> ${res.status} ${res.statusText}`);
   return res;
 };
 
@@ -200,16 +200,18 @@ const heroCard = async () => {
 // --- Product shots -------------------------------------------------------------------------
 // Copied out of the project repos rather than hotlinked, so reorganising docs/ over there can
 // never leave a broken image here — the workflow fails loudly instead and the copy stays put.
+// A fourth element names a ref: ai-job-hunter-app gitignores its rendered marketing PNGs on
+// main and publishes the README-embeddable ones to its parentless `assets` branch instead.
 const SHOTS = [
-  ["ai-job-hunter-app", "branding/marketing/01-hero.png", "job-hunter.png"],
+  ["ai-job-hunter-app", "marketing-01-hero.png", "job-hunter.png", "assets"],
   ["claude-usage-mac", "docs/gallery/widget-medium.png", "claude-usage-mac.png"],
   ["saeed-kolivand-portfolio", "docs/readme/plates/00-cover.png", "portfolio.png"],
 ];
 
 const shots = async () => {
   await mkdir("assets/shots", { recursive: true });
-  for (const [repo, path, out] of SHOTS) {
-    const bytes = Buffer.from(await (await raw(repo, path)).arrayBuffer());
+  for (const [repo, path, out, ref] of SHOTS) {
+    const bytes = Buffer.from(await (await raw(repo, path, ref)).arrayBuffer());
     await writeFile(`assets/shots/${out}`, bytes);
     console.log(`Wrote assets/shots/${out} (${Math.round(bytes.length / 1024)}KB from ${repo}).`);
   }
