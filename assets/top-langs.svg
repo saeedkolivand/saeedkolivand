@@ -6,17 +6,17 @@
 <text x="24" y="38" font-family="'Arial Black','Helvetica Neue',Impact,sans-serif" font-size="19" font-weight="900" fill="#f2ead9" text-anchor="start" letter-spacing="0.5">MOST USED LANGUAGES</text>
 <rect x="24" y="48" width="352" height="3" fill="#e2574c"/>
 <rect x="24" y="66" width="352" height="14" fill="#15120f" stroke="#f2ead9" stroke-width="2"/>
-<rect x="24.0" y="66" width="168.2" height="14" fill="#3178c6"/>
-<rect x="192.2" y="66" width="137.6" height="14" fill="#dea584"/>
-<rect x="329.8" y="66" width="24.9" height="14" fill="#f1e05a"/>
-<rect x="354.7" y="66" width="7.3" height="14" fill="#563d7c"/>
-<rect x="362.1" y="66" width="4.8" height="14" fill="#F05138"/>
-<rect x="366.8" y="66" width="3.2" height="14" fill="#239dad"/>
+<rect x="24.0" y="66" width="165.2" height="14" fill="#3178c6"/>
+<rect x="189.2" y="66" width="140.9" height="14" fill="#dea584"/>
+<rect x="330.1" y="66" width="25.0" height="14" fill="#f1e05a"/>
+<rect x="355.1" y="66" width="7.2" height="14" fill="#563d7c"/>
+<rect x="362.3" y="66" width="4.7" height="14" fill="#F05138"/>
+<rect x="367.0" y="66" width="3.1" height="14" fill="#239dad"/>
 <rect x="24" y="66" width="352" height="14" fill="none" stroke="#f2ead9" stroke-width="2"/>
-<rect x="25" y="99" width="10" height="10" fill="#3178c6" stroke="#f2ead9" stroke-width="1.5"/><text x="43" y="108" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">TypeScript 47.8%</text>
-<rect x="210" y="99" width="10" height="10" fill="#dea584" stroke="#f2ead9" stroke-width="1.5"/><text x="228" y="108" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">Rust 39.1%</text>
+<rect x="25" y="99" width="10" height="10" fill="#3178c6" stroke="#f2ead9" stroke-width="1.5"/><text x="43" y="108" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">TypeScript 46.9%</text>
+<rect x="210" y="99" width="10" height="10" fill="#dea584" stroke="#f2ead9" stroke-width="1.5"/><text x="228" y="108" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">Rust 40.0%</text>
 <rect x="25" y="121" width="10" height="10" fill="#f1e05a" stroke="#f2ead9" stroke-width="1.5"/><text x="43" y="130" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">JavaScript 7.1%</text>
-<rect x="210" y="121" width="10" height="10" fill="#563d7c" stroke="#f2ead9" stroke-width="1.5"/><text x="228" y="130" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">CSS 2.1%</text>
-<rect x="25" y="143" width="10" height="10" fill="#F05138" stroke="#f2ead9" stroke-width="1.5"/><text x="43" y="152" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">Swift 1.4%</text>
+<rect x="210" y="121" width="10" height="10" fill="#563d7c" stroke="#f2ead9" stroke-width="1.5"/><text x="228" y="130" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">CSS 2.0%</text>
+<rect x="25" y="143" width="10" height="10" fill="#F05138" stroke="#f2ead9" stroke-width="1.5"/><text x="43" y="152" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">Swift 1.3%</text>
 <rect x="210" y="143" width="10" height="10" fill="#239dad" stroke="#f2ead9" stroke-width="1.5"/><text x="228" y="152" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">Typst 0.9%</text>
 </svg>
