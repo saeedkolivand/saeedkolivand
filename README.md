@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
+- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 <!-- BUILDING:END -->
 
 ---
@@ -88,11 +88,13 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-09-02` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-04` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-03` &nbsp; Opened PR [#1103](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1103) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-05` &nbsp; Opened PR [#1111](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1111) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-03` &nbsp; Released [v0.146.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.146.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-05` &nbsp; Released [v0.148.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.148.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-09-02` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
 <!-- ACTIVITY:END -->
 
 ---
