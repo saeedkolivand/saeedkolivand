@@ -52,8 +52,8 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 <!-- BUILDING:END -->
 
@@ -88,13 +88,13 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
+`2026-09-07` &nbsp; Pushed to `feat/extension-store-publish` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-09-07` &nbsp; Opened PR [#1119](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1119) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
 `2026-09-07` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
 
-`2026-09-05` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
 `2026-09-07` &nbsp; Opened PR [#88](https://github.com/saeedkolivand/saeed-kolivand-portfolio/pull/88) in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
-
-`2026-09-07` &nbsp; Opened PR [#1117](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1117) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-09-05` &nbsp; Released [v0.148.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.148.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
