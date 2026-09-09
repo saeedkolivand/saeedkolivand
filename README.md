@@ -88,9 +88,11 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-09-08` &nbsp; Pushed to `ui/agent-card-generic-mcp` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-09` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-08` &nbsp; Opened PR [#1174](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1174) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-09` &nbsp; Opened PR [#1187](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1187) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-09-09` &nbsp; Released [v0.151.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.151.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
