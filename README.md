@@ -53,8 +53,8 @@
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 - **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 <!-- BUILDING:END -->
 
 ---
@@ -88,13 +88,13 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-09-10` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-11` &nbsp; Pushed to `feat/extension-redesign` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-09` &nbsp; Opened PR [#1190](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1190) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-11` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
 
-`2026-09-10` &nbsp; Released [v0.153.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.153.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-11` &nbsp; Opened PR [#1201](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1201) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-10` &nbsp; Opened PR [#10161](https://github.com/flathub/flathub/pull/10161) in [flathub/flathub](https://github.com/flathub/flathub)
+`2026-09-10` &nbsp; Released [v0.153.2](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.153.2) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
