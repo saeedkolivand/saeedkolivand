@@ -52,8 +52,8 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
+- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — Ray-Ban Meta glasses to Kick/Twitch RTMP with chat, built without a Mac `Swift`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 <!-- BUILDING:END -->
 
@@ -88,13 +88,15 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-09-14` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-15` &nbsp; Opened PR [#1204](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1204) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-12` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
+`2026-09-15` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-12` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
+`2026-09-15` &nbsp; Pushed to `main` in [irl-privacy](https://github.com/saeedkolivand/irl-privacy)
 
-`2026-09-11` &nbsp; Opened PR [#1201](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1201) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-14` &nbsp; Pushed to `main` in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
+
+`2026-09-14` &nbsp; Opened PR [#13](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin/pull/13) in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
 <!-- ACTIVITY:END -->
 
 ---
