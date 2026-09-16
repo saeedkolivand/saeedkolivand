@@ -43,8 +43,8 @@
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
 | **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 56 |
-| **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 15 |
-| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 14 |
+| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 15 |
+| **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 14 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 12 |
 | **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | Three.js · WebGL · GSAP | 10 |
 <!-- FEATURED:END -->
@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — Ray-Ban Meta glasses to Kick/Twitch RTMP with chat, built without a Mac `Swift`
-- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a stream manager and pho… `SwiftUI · Swift`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
+- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
 <!-- BUILDING:END -->
 
 ---
@@ -88,15 +88,13 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-09-15` &nbsp; Opened PR [#1204](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1204) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-16` &nbsp; Pushed to `feat/live-camera-controls` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
-`2026-09-15` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-16` &nbsp; Opened PR [#25](https://github.com/saeedkolivand/meta-stream/pull/25) in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
-`2026-09-15` &nbsp; Pushed to `main` in [irl-privacy](https://github.com/saeedkolivand/irl-privacy)
+`2026-09-14` &nbsp; Pushed to `feat/extension-read-tier` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-14` &nbsp; Pushed to `main` in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
-
-`2026-09-14` &nbsp; Opened PR [#13](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin/pull/13) in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
+`2026-09-16` &nbsp; Opened PR [#1205](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1205) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
