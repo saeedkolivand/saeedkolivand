@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a stream manager and pho… `SwiftUI · Swift`
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses (or just your phone) to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a s… `SwiftUI · Swift`
+- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
 <!-- BUILDING:END -->
 
 ---
@@ -88,13 +88,15 @@
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-09-16` &nbsp; Pushed to `feat/live-camera-controls` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+`2026-09-15` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
-`2026-09-16` &nbsp; Opened PR [#25](https://github.com/saeedkolivand/meta-stream/pull/25) in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+`2026-09-17` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-09-14` &nbsp; Pushed to `feat/extension-read-tier` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-16` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
 
-`2026-09-16` &nbsp; Opened PR [#1205](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1205) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-10` &nbsp; Opened PR [#1198](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1198) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-09-16` &nbsp; Released [v0.154.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.154.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
