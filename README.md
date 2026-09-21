@@ -61,11 +61,8 @@
 
 ## 👨‍💻 About Me
 
-**The origin issue.** Six years of front-end, most of it React and Next.js, on products people log into every day. Somewhere in there I stopped waiting for a ticket and started shipping my own things.
-
-**Three worlds.** TypeScript on the web, Rust behind Tauri on the desktop, Swift when the Mac deserves something native. Same instinct every time: keep it local, keep it fast, leave the user's data on the user's machine.
-
-**Zero ghosting.** Issues get answered, PRs get reviewed, releases ship. Currently in Cologne, Germany.
+Six years of front-end, most of it React, Next.js and Typescript, on products people log into every day.
+Currently in Cologne, Germany.
 
 ---
 
