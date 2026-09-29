@@ -43,7 +43,7 @@
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
 | **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 60 |
-| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 18 |
+| **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 19 |
 | **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 15 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 13 |
 | **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | Three.js · WebGL · GSAP | 12 |
@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner list, get the fastest delivery route. Node + Expo/React Native. `TypeScript`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
+- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner list, get the fastest delivery route. Node + Expo/React Native. `TypeScript`
 <!-- BUILDING:END -->
 
 ---
@@ -85,15 +85,15 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
+`2026-09-28` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
 `2026-09-28` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
-`2026-09-28` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-09-28` &nbsp; Opened PR [#1295](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1295) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-09-27` &nbsp; Merged PR [#3](https://github.com/saeedkolivand/tour-planner/pull/3) in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
 `2026-09-27` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
-
-`2026-09-26` &nbsp; Opened PR [#1287](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1287) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
