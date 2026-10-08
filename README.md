@@ -42,7 +42,7 @@
 <!-- FEATURED:START -->
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
-| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 60 |
+| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 61 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 19 |
 | **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 15 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 13 |
@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
 - **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner list, get the fastest delivery route. Node + Expo/React Native. `TypeScript`
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 <!-- BUILDING:END -->
 
 ---
@@ -85,11 +85,11 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-10-07` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-08` &nbsp; Opened PR [#1401](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1401) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-10-06` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
+`2026-10-08` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-10-07` &nbsp; Opened PR [#1375](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1375) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-08` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 <!-- ACTIVITY:END -->
 
 ---
