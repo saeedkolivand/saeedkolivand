@@ -54,7 +54,7 @@
 <!-- BUILDING:START -->
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner list, get the fastest delivery route. Node + Expo/React Native. `TypeScript`
+- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
 <!-- BUILDING:END -->
 
 ---
@@ -85,11 +85,11 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-10-08` &nbsp; Opened PR [#1401](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1401) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-09` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
-`2026-10-08` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-09` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-10-08` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
+`2026-10-09` &nbsp; Opened PR [#1371](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1371) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
