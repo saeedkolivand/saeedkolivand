@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
+- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses (or just your phone) to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a s… `SwiftUI · Swift`
 <!-- BUILDING:END -->
 
 ---
@@ -87,9 +87,13 @@ Currently in Cologne, Germany.
 <!-- ACTIVITY:START -->
 `2026-10-09` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
+`2026-10-08` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
+
+`2026-10-09` &nbsp; Pushed to `fix/orientation-facecam-logs` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+
 `2026-10-09` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-10-09` &nbsp; Opened PR [#1371](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1371) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-09` &nbsp; Opened PR [#30](https://github.com/saeedkolivand/meta-stream/pull/30) in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 <!-- ACTIVITY:END -->
 
 ---
