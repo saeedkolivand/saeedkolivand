@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
 - **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses (or just your phone) to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a s… `SwiftUI · Swift`
-- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
+- **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
 <!-- BUILDING:END -->
 
 ---
@@ -87,13 +87,13 @@ Currently in Cologne, Germany.
 <!-- ACTIVITY:START -->
 `2026-10-19` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
-`2026-10-19` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-20` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-10-20` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
 `2026-10-18` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
 
 `2026-10-10` &nbsp; Opened PR [#1418](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1418) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-10-17` &nbsp; Released [v0.158.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.158.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
