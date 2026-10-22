@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses (or just your phone) to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a s… `SwiftUI · Swift`
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
+- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses (or just your phone) to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a s… `SwiftUI · Swift`
 <!-- BUILDING:END -->
 
 ---
@@ -85,9 +85,9 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-10-19` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+`2026-10-22` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-10-20` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-21` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
 `2026-10-20` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
