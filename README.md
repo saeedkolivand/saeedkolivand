@@ -53,8 +53,8 @@
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 - **[contact-page-assessment](https://github.com/saeedkolivand/contact-page-assessment)** — _no description yet_ `TypeScript`
-- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
 <!-- BUILDING:END -->
 
 ---
@@ -85,9 +85,11 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-10-21` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+`2026-10-24` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-10-22` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-22` &nbsp; Pushed to `main` in [contact-page-assessment](https://github.com/saeedkolivand/contact-page-assessment)
+
+`2026-10-21` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
 `2026-10-20` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
