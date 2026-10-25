@@ -85,15 +85,15 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-10-24` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-25` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-10-19` &nbsp; Opened PR [#1441](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1441) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-10-24` &nbsp; Released [v0.159.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.159.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-10-22` &nbsp; Pushed to `main` in [contact-page-assessment](https://github.com/saeedkolivand/contact-page-assessment)
 
 `2026-10-21` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
-
-`2026-10-20` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
-
-`2026-10-18` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
 <!-- ACTIVITY:END -->
 
 ---
