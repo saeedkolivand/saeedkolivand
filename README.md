@@ -53,8 +53,8 @@
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
-- **[contact-page-assessment](https://github.com/saeedkolivand/contact-page-assessment)** — _no description yet_ `TypeScript`
+- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — IRL streaming from Ray-Ban Meta glasses (or just your phone) to Kick, Twitch, YouTube, Restream or any RTMP server, with chat, a s… `SwiftUI · Swift`
+- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
 <!-- BUILDING:END -->
 
 ---
@@ -85,15 +85,15 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-10-25` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-10-25` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
+
+`2026-10-25` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
+
+`2026-10-24` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-10-19` &nbsp; Opened PR [#1441](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1441) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-10-24` &nbsp; Released [v0.159.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.159.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-10-22` &nbsp; Pushed to `main` in [contact-page-assessment](https://github.com/saeedkolivand/contact-page-assessment)
-
-`2026-10-21` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 <!-- ACTIVITY:END -->
 
 ---
