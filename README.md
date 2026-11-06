@@ -52,9 +52,9 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
 - **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — A pocket OBS for IRL streamers on iPhone, iPad and Android: scenes and widgets, audio mix, recording, SRTLA bonding, chat moderati… `SwiftUI · Swift`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 <!-- BUILDING:END -->
 
 ---
@@ -85,11 +85,11 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-03` &nbsp; Pushed to `ci-fixes` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+`2026-11-05` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+
+`2026-11-05` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-11-05` &nbsp; Opened PR [#4](https://github.com/whossein/ai-platform-review/pull/4) in [whossein/ai-platform-review](https://github.com/whossein/ai-platform-review)
-
-`2026-11-03` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-11-04` &nbsp; Opened PR [#39](https://github.com/saeedkolivand/meta-stream/pull/39) in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
