@@ -53,8 +53,8 @@
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 - **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — A pocket OBS for IRL streamers on iPhone, iPad and Android: scenes and widgets, audio mix, recording, SRTLA bonding, chat moderati… `SwiftUI · Swift`
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 <!-- BUILDING:END -->
 
 ---
@@ -85,13 +85,13 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-05` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+`2026-11-07` &nbsp; Opened PR [#5](https://github.com/whossein/ai-platform-review/pull/5) in [whossein/ai-platform-review](https://github.com/whossein/ai-platform-review)
+
+`2026-11-06` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+
+`2026-11-06` &nbsp; Opened PR [#41](https://github.com/saeedkolivand/meta-stream/pull/41) in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
 `2026-11-05` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-11-05` &nbsp; Opened PR [#4](https://github.com/whossein/ai-platform-review/pull/4) in [whossein/ai-platform-review](https://github.com/whossein/ai-platform-review)
-
-`2026-11-04` &nbsp; Opened PR [#39](https://github.com/saeedkolivand/meta-stream/pull/39) in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
 `2026-11-01` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 <!-- ACTIVITY:END -->
