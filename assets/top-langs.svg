@@ -6,11 +6,11 @@
 <text x="24" y="38" font-family="'Arial Black','Helvetica Neue',Impact,sans-serif" font-size="19" font-weight="900" fill="#f2ead9" text-anchor="start" letter-spacing="0.5">MOST USED LANGUAGES</text>
 <rect x="24" y="48" width="352" height="3" fill="#e2574c"/>
 <rect x="24" y="66" width="352" height="14" fill="#15120f" stroke="#f2ead9" stroke-width="2"/>
-<rect x="24.0" y="66" width="145.8" height="14" fill="#3178c6"/>
-<rect x="169.8" y="66" width="135.2" height="14" fill="#dea584"/>
-<rect x="305.0" y="66" width="22.0" height="14" fill="#f1e05a"/>
-<rect x="327.0" y="66" width="20.9" height="14" fill="#F05138"/>
-<rect x="347.8" y="66" width="14.3" height="14" fill="#A97BFF"/>
+<rect x="24.0" y="66" width="145.7" height="14" fill="#3178c6"/>
+<rect x="169.7" y="66" width="135.3" height="14" fill="#dea584"/>
+<rect x="305.0" y="66" width="22.1" height="14" fill="#f1e05a"/>
+<rect x="327.1" y="66" width="20.8" height="14" fill="#F05138"/>
+<rect x="347.9" y="66" width="14.3" height="14" fill="#A97BFF"/>
 <rect x="362.2" y="66" width="5.8" height="14" fill="#563d7c"/>
 <rect x="24" y="66" width="352" height="14" fill="none" stroke="#f2ead9" stroke-width="2"/>
 <rect x="25" y="99" width="10" height="10" fill="#3178c6" stroke="#f2ead9" stroke-width="1.5"/><text x="43" y="108" font-family="'Segoe UI',Ubuntu,Helvetica,sans-serif" font-size="13" font-weight="400" fill="#f2ead9" text-anchor="start">TypeScript 41.4%</text>
