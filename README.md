@@ -85,15 +85,13 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-10` &nbsp; Opened PR [#1488](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1488) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-10` &nbsp; Pushed to `auth-proxy` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 
-`2026-11-10` &nbsp; Opened PR [#44](https://github.com/saeedkolivand/meta-stream/pull/44) in [meta-stream](https://github.com/saeedkolivand/meta-stream)
+`2026-11-10` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-11-09` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-10` &nbsp; Opened PR [#28](https://github.com/whossein/ai-platform-review/pull/28) in [whossein/ai-platform-review](https://github.com/whossein/ai-platform-review)
 
-`2026-11-08` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
-
-`2026-11-07` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
+`2026-10-29` &nbsp; Opened PR [#1470](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1470) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 <!-- ACTIVITY:END -->
 
 ---
