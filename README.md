@@ -52,8 +52,8 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
 <!-- BUILDING:END -->
 
@@ -87,13 +87,13 @@ Currently in Cologne, Germany.
 <!-- ACTIVITY:START -->
 `2026-11-11` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-11-12` &nbsp; Opened PR [#6](https://github.com/MamadPoker/Jarchi/pull/6) in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
+`2026-11-12` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
 `2026-11-10` &nbsp; Pushed to `main` in [whossein/ai-platform-review](https://github.com/whossein/ai-platform-review)
 
-`2026-11-11` &nbsp; Opened PR [#1503](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1503) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-12` &nbsp; Pushed to `ci/release-automation` in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
 
-`2026-11-12` &nbsp; Released [v0.161.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.161.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-12` &nbsp; Opened PR [#16](https://github.com/MamadPoker/Jarchi/pull/16) in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
 <!-- ACTIVITY:END -->
 
 ---
