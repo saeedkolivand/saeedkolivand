@@ -45,16 +45,16 @@
 | **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 63 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 21 |
 | **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 15 |
-| **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 13 |
 | **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | Three.js · WebGL · GSAP | 13 |
+| **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 13 |
 <!-- FEATURED:END -->
 
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** — Interactive 3D scroll-driven portfolio `Three.js · WebGL`
 - **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
-- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
 <!-- BUILDING:END -->
 
 ---
@@ -85,15 +85,15 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-11` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-12` &nbsp; Pushed to `main` in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
+
+`2026-11-12` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-11-14` &nbsp; Opened PR [#28](https://github.com/MamadPoker/Jarchi/pull/28) in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
 
 `2026-11-12` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
 
-`2026-11-10` &nbsp; Pushed to `main` in [whossein/ai-platform-review](https://github.com/whossein/ai-platform-review)
-
-`2026-11-12` &nbsp; Pushed to `ci/release-automation` in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
-
-`2026-11-12` &nbsp; Opened PR [#16](https://github.com/MamadPoker/Jarchi/pull/16) in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
+`2026-11-12` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
 <!-- ACTIVITY:END -->
 
 ---
