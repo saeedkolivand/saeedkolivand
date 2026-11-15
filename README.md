@@ -42,7 +42,7 @@
 <!-- FEATURED:START -->
 | Project | What it is | Stack | ★ |
 | :-- | :-- | :-- | --: |
-| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 63 |
+| **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 64 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 21 |
 | **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 15 |
 | **[saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)** | Interactive 3D scroll-driven portfolio | Three.js · WebGL · GSAP | 13 |
@@ -85,15 +85,15 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-12` &nbsp; Pushed to `main` in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
+`2026-11-15` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
+
+`2026-11-14` &nbsp; Pushed to `main` in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
 
 `2026-11-12` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-11-14` &nbsp; Opened PR [#28](https://github.com/MamadPoker/Jarchi/pull/28) in [MamadPoker/Jarchi](https://github.com/MamadPoker/Jarchi)
 
 `2026-11-12` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
-
-`2026-11-12` &nbsp; Pushed to `main` in [crosskit](https://github.com/saeedkolivand/crosskit)
 <!-- ACTIVITY:END -->
 
 ---
