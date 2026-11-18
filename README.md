@@ -52,8 +52,8 @@
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
-- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
+- **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** — Claude Code usage in the macOS menu bar and as a desktop widget `SwiftUI · WidgetKit`
 - **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
 <!-- BUILDING:END -->
 
@@ -85,13 +85,13 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-16` &nbsp; Opened PR [#1533](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1533) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-17` &nbsp; Opened PR [#1535](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1535) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-11-17` &nbsp; Released [v0.162.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.162.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-18` &nbsp; Released [v0.163.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.163.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-11-17` &nbsp; Pushed to `feat/letter-restated-point-check` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-11-17` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
-
-`2026-11-16` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-11-15` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
 <!-- ACTIVITY:END -->
