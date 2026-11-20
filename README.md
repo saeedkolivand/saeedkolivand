@@ -90,10 +90,6 @@ Currently in Cologne, Germany.
 `2026-11-18` &nbsp; Opened PR [#1543](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1543) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
 `2026-11-18` &nbsp; Released [v0.163.0](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.163.0) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
-
-`2026-11-17` &nbsp; Pushed to `main` in [tour-planner](https://github.com/saeedkolivand/tour-planner)
-
-`2026-11-15` &nbsp; Pushed to `main` in [saeed-kolivand-portfolio](https://github.com/saeedkolivand/saeed-kolivand-portfolio)
 <!-- ACTIVITY:END -->
 
 ---
