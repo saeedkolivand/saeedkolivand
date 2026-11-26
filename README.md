@@ -45,16 +45,16 @@
 | **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** | Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… | Tauri · Rust · React | 65 |
 | **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** | Stream Deck plugin showing Claude session/weekly usage | Stream Deck · TypeScript · macOS | 22 |
 | **[claude-usage-mac](https://github.com/saeedkolivand/claude-usage-mac)** | Claude Code usage in the macOS menu bar and as a desktop widget | SwiftUI · WidgetKit · Swift | 15 |
-| **[meta-stream](https://github.com/saeedkolivand/meta-stream)** | A pocket OBS for IRL streamers on iPhone, iPad and Android: scenes and widgets, audio mix, recording, SRTLA bonding, chat moderati… | SwiftUI · Swift | 13 |
 | **[crosskit](https://github.com/saeedkolivand/crosskit)** | Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. | React · Vue · Svelte | 13 |
+| **[meta-stream](https://github.com/saeedkolivand/meta-stream)** | A pocket OBS for IRL streamers on iPhone, iPad and Android: scenes and widgets, audio mix, recording, SRTLA bonding, chat moderati… | SwiftUI · Swift | 13 |
 <!-- FEATURED:END -->
 
 ## 🚧 Currently Building
 
 <!-- BUILDING:START -->
 - **[ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)** — Local-first AI desktop assistant that scrapes job boards, matches roles to your resume, and auto-generates resumes & cover letters… `Tauri · Rust`
-- **[tour-planner](https://github.com/saeedkolivand/tour-planner)** — Photograph a DPD scanner's stop list and get the fastest delivery order: park-and-walk stops, Express first, one-tap navigation. R… `Next.js · Tailwind`
-- **[meta-stream](https://github.com/saeedkolivand/meta-stream)** — A pocket OBS for IRL streamers on iPhone, iPad and Android: scenes and widgets, audio mix, recording, SRTLA bonding, chat moderati… `SwiftUI · Swift`
+- **[crosskit](https://github.com/saeedkolivand/crosskit)** — Framework-agnostic UI components. One behavior core, one stylesheet, adapters for React, Vue, Svelte and Angular. `React · Vue`
+- **[claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)** — Stream Deck plugin showing Claude session/weekly usage `Stream Deck · TypeScript`
 <!-- BUILDING:END -->
 
 ---
@@ -85,11 +85,13 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-23` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
-
 `2026-11-24` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-11-25` &nbsp; Opened PR [#1567](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1567) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-26` &nbsp; Opened PR [#1577](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1577) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-11-25` &nbsp; Opened PR [#18](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin/pull/18) in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
+
+`2026-11-23` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 <!-- ACTIVITY:END -->
 
 ---
