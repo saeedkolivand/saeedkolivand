@@ -85,13 +85,15 @@ Currently in Cologne, Germany.
 ## ⚡ Recent Activity
 
 <!-- ACTIVITY:START -->
-`2026-11-24` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-27` &nbsp; Pushed to `main` in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
 
-`2026-11-26` &nbsp; Opened PR [#1577](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1577) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+`2026-11-25` &nbsp; Opened PR [#1567](https://github.com/saeedkolivand/ai-job-hunter-app/pull/1567) in [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-11-27` &nbsp; Released [v0.164.1](https://github.com/saeedkolivand/ai-job-hunter-app/releases/tag/v0.164.1) of [ai-job-hunter-app](https://github.com/saeedkolivand/ai-job-hunter-app)
+
+`2026-11-25` &nbsp; Pushed to `main` in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
 
 `2026-11-25` &nbsp; Opened PR [#18](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin/pull/18) in [claude-usage-streamdeck-plugin](https://github.com/saeedkolivand/claude-usage-streamdeck-plugin)
-
-`2026-11-23` &nbsp; Pushed to `main` in [meta-stream](https://github.com/saeedkolivand/meta-stream)
 <!-- ACTIVITY:END -->
 
 ---
